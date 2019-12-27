@@ -1,0 +1,78 @@
+PODS:
+  - CosmosEncrypt (0.0.1):
+    - openssl-lib
+    - protobuf-lib
+  - Mantle (2.1.0):
+    - Mantle/extobjc (= 2.1.0)
+  - Mantle/extobjc (2.1.0)
+  - MCCSecret (1.0.0)
+  - MetalPetal (1.7.0):
+    - MetalPetal/Core (= 1.7.0)
+  - MetalPetal/Core (1.7.0)
+  - MMBeautyKit (1.0.0):
+    - CosmosEncrypt
+    - MCCSecret
+    - MMBeautyMedia
+    - MMCV
+    - MMDevice
+    - MMFileService
+  - MMBeautyMedia (1.0.0):
+    - Mantle
+    - MetalPetal
+  - MMCV (1.1.0):
+    - MCCSecret
+    - ZipArchive
+  - MMDevice (1.0.0)
+  - MMFileService (1.3.0)
+  - openssl-lib (1.0.1)
+  - protobuf-lib (3.6.1)
+  - ZipArchive (1.4.0)
+
+DEPENDENCIES:
+  - CosmosEncrypt (from `https://github.com/cosmos33/CosmosEncrypt.git`)
+  - MMBeautyKit (from `/Users/sunfei/Developer/MMVideoSDK_github/MMBeautyKit-iOS/MMBeautyKit.podspec`)
+  - MMBeautyMedia (from `/Users/sunfei/Developer/MMVideoSDK_github/MMBeautyMedia-iOS/MMBeautyMedia.podspec`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Mantle
+    - MetalPetal
+    - ZipArchive
+  https://github.com/cosmos33/MMSpecs.git:
+    - MCCSecret
+    - MMCV
+    - MMDevice
+    - MMFileService
+    - openssl-lib
+    - protobuf-lib
+
+EXTERNAL SOURCES:
+  CosmosEncrypt:
+    :git: https://github.com/cosmos33/CosmosEncrypt.git
+  MMBeautyKit:
+    :path: "/Users/sunfei/Developer/MMVideoSDK_github/MMBeautyKit-iOS/MMBeautyKit.podspec"
+  MMBeautyMedia:
+    :path: "/Users/sunfei/Developer/MMVideoSDK_github/MMBeautyMedia-iOS/MMBeautyMedia.podspec"
+
+CHECKOUT OPTIONS:
+  CosmosEncrypt:
+    :commit: 93830734a55bb84c3cefeb8e5fc625823e9513fe
+    :git: https://github.com/cosmos33/CosmosEncrypt.git
+
+SPEC CHECKSUMS:
+  CosmosEncrypt: 753de0901c0cf87a828e45e9df0c98addd25f152
+  Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
+  MCCSecret: 5658f66290969726586eddbdfe45e27731dbfa17
+  MetalPetal: 0528d117c412ae18e25bde3c838b275de64cdf30
+  MMBeautyKit: de9160c0759a1666d1ae4f14d9d98f0eaddc7d04
+  MMBeautyMedia: f7fecc2454899a7c64cfd1924aa22c395781c376
+  MMCV: d073f8afa0c85834b8ed46c690165a9d21b6bf7b
+  MMDevice: 8fdf446c7aedc2243918eabcf66f1c84f362931e
+  MMFileService: a490858672aa903050e31c19ed40ffd33784ce91
+  openssl-lib: e3f61a10280caf261c0e4c6b3e720aa94825f07a
+  protobuf-lib: 17f7bc24b358cfeab87def9adc59c76bc220cd05
+  ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
+
+PODFILE CHECKSUM: 77f392be2e6e592bb670a173c1059b2a3862164a
+
+COCOAPODS: 1.7.5
