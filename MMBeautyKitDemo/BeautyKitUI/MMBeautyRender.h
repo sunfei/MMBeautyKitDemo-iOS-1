@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-@import MMBeautyKit;
+#import <AVFoundation/AVFoundation.h>
+#import <MMBeautyKit/MMRenderModuleManager.h>
+#import <MMBeautyKit/MMRenderFilterBeautyModule.h>
+#import <MMBeautyKit/MMRenderFilterLookupModule.h>
+#import <MMBeautyKit/MMRenderFilterStickerModule.h>
+#import <MMBeautyKit/MMRenderFilterBigHeadEffectModule.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,7 +27,17 @@ NS_ASSUME_NONNULL_BEGIN
 // 图像数据形式, 默认MMRenderInputTypeStream。 相机或视频MMRenderInputTypeStream，静态图片MMRenderInputTypeStatic
 @property (nonatomic, assign) MMRenderInputType inputType;
 
+// 设置美颜参数
 - (void)setBeautyFactor:(float)value forKey:(MMBeautyFilterKey)key;
+
+// 设置lookup素材路径
+- (void)setLookupPath:(NSString *)lookupPath;
+// 设置lookup滤镜浓度
+- (void)setLookupIntensity:(CGFloat)intensity;
+
+// 设置贴纸资源路径
+- (void)setMaskModelPath:(NSString *)path;
+- (void)clearSticker;
 
 - (CVPixelBufferRef _Nullable)renderPixelBuffer:(CVPixelBufferRef)pixelBuffer
                                           error:(NSError * __autoreleasing _Nullable *)error;

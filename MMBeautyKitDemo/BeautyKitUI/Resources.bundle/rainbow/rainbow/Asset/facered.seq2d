@@ -1,0 +1,8 @@
+MOXB<?xml version="1.0" encoding="GB2312"?>
+<Img2DSequenceFrame>
+ <Node Name="facered" Type="MagicSeqFrame" FilterPath="">
+	<Img2DSequenceFrameAnimation SequenceFrameAssetType="SingleTexture" TextureWidth="599" TextureHeight="599" RelativeToCurrent="0" FrameContentDir="SequenceFrameDefaultDir/facered_20200804145905" FrameCount="1" FPS="15" Reverse="0" LoopMode="0" LoopStartIndex="-1" LoopEndIndex="-1" PlayCount="1">
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/facered_20200804145905/facered.png" Col="1" Row="1"/>
+	</Img2DSequenceFrameAnimation>
+ </Node>
+</Img2DSequenceFrame>
