@@ -8,7 +8,6 @@
 
 #import "MMVideoAssetsCollectionViewController.h"
 #import "MMAssetGridViewCell.h"
-#import "MMPhotoEditViewController.h"
 @import Photos;
 
 @interface MMVideoAssetsCollectionViewController () <PHPhotoLibraryChangeObserver>
@@ -203,9 +202,6 @@ static NSString * const reuseIdentifier = @"Cell";
                                    contentMode:PHImageContentModeDefault
                                        options:options
                                  resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
-            MMPhotoEditViewController *vc = [[MMPhotoEditViewController alloc] init];
-            vc.photo = result;
-            [self.navigationController pushViewController:vc animated:YES];
         }];
     } else if (asset.mediaType == PHAssetMediaTypeVideo) {
         NSLog(@"video");

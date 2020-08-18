@@ -1,17 +1,27 @@
 source 'https://github.com/cosmos33/MMSpecs.git'
-source 'https://github.com/CocoaPods/Specs.git'
+source 'https://cdn.cocoapods.org/'
 
-use_frameworks!
+
+#use_frameworks!
 
 platform :ios, '10.0'
 
 target 'MMBeautyKitDemo' do
 
-  pod 'MMBeautyKit'
+  pod 'MMXEngine', '4.4.4'
+  pod 'MetalPetal', '1.10.5', :modular_headers => true
+  pod 'MMBeautyKit', '1.2.0'
+  pod 'MMBeautyMedia', '1.2.0'
+end
 
-#  pod 'MCCSecret', '1.0.0'
-#  pod 'MMFileService', '1.3.0'
-#  pod 'MMCV'
-  pod 'CosmosEncrypt', :git => 'https://github.com/cosmos33/CosmosEncrypt.git'
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
 
+        target.build_configurations.each do |config|
+            config.build_settings['PROVISIONING_PROFILE'] = ''
+            config.build_settings['PROVISIONING_PROFILE_SPECIFIER'] = ''
+            config.build_settings['CODE_SIGNING_REQUIRED'] = 'NO'
+            config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
+        end
+    end
 end

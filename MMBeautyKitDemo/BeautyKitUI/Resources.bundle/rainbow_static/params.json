@@ -1,0 +1,25 @@
+{
+    "name": "rainbow",
+    "frameRate": 15,
+    "itemList": [
+        {
+            "layerType": "default",
+            "triggerType": 0,
+            "pointIndex": 0,
+            "folder": "rainbow",
+            "imageType": "png",
+            "frames": 1,
+            "height": 512,
+            "width": 512,
+	    "intensity": 0.9,
+            "type": 2,
+            "offsetX": 0,
+            "offsetY": 0,
+            "loopingIndex": 0,
+            "alwaysShow": true,
+            "blendMode": {
+                "name": "ColorDistortion"
+            }
+        }
+    ]
+}

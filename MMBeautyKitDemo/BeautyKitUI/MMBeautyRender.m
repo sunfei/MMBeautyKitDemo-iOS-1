@@ -7,11 +7,15 @@
 //
 
 #import "MMBeautyRender.h"
+#import <MMBeautyKit/CosmosBeautySDK.h>
 
 @interface MMBeautyRender () <CosmosBeautySDKDelegate>
 
 @property (nonatomic, strong) MMRenderModuleManager *render;
-@property (nonatomic, strong) MMRenderFilterBeautyModule *descriptor;
+@property (nonatomic, strong) MMRenderFilterBeautyModule *beautyDescriptor;
+@property (nonatomic, strong) MMRenderFilterLookupModule *lookupDescriptor;
+@property (nonatomic, strong) MMRenderFilterStickerModule *stickerDescriptor;
+@property (nonatomic, strong) MMRenderFilterBigHeadEffectModule *bigHeadDescriptor;
 
 @end
 
@@ -23,23 +27,32 @@
         
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
-            [CosmosBeautySDK initSDKWithAppId:@"9dac61837c9bc9eba14f8a32584bde1f" delegate:self];
+#if DEBUG
+            [CosmosBeautySDK initSDKWithAppId:@"02f12cc7047df70ba57b3efc43b3ed91" delegate:self];
+#else
+            [CosmosBeautySDK initSDKWithAppId:@"6b38bc8e6afdbd040b8f6386b65c0aac" delegate:self];
+#endif
         });
         
         MMRenderModuleManager *render = [[MMRenderModuleManager alloc] init];
         render.devicePosition = AVCaptureDevicePositionFront;
         self.render = render;
         
-        MMRenderFilterBeautyModule *descriptor = [[MMRenderFilterBeautyModule alloc] init];
-        [render registerFilterModule:descriptor];
-        self.descriptor = descriptor;
+        _beautyDescriptor = [[MMRenderFilterBeautyModule alloc] init];
+        [render registerModule:_beautyDescriptor];
+
+        _lookupDescriptor = [[MMRenderFilterLookupModule alloc] init];
+        [render registerModule:_lookupDescriptor];
+        
+        _stickerDescriptor = [[MMRenderFilterStickerModule alloc] init];
+        [render registerModule:_stickerDescriptor];
     }
     return self;
 }
 
 - (CVPixelBufferRef _Nullable)renderPixelBuffer:(CVPixelBufferRef)pixelBuffer
                                           error:(NSError * __autoreleasing _Nullable *)error {
-    return [self.render renderPixelBuffer:pixelBuffer error:error];
+    return [self.render renderFrame:pixelBuffer error:error];
 }
 
 - (void)setInputType:(MMRenderInputType)inputType {
@@ -67,7 +80,24 @@
 }
 
 - (void)setBeautyFactor:(float)value forKey:(MMBeautyFilterKey)key {
-    [self.descriptor setBeautyFactor:value forKey:key];
+    [self.beautyDescriptor setBeautyFactor:value forKey:key];
+}
+
+- (void)setLookupPath:(NSString *)lookupPath {
+    [self.lookupDescriptor setLookupResourcePath:lookupPath];
+    [self.lookupDescriptor setIntensity:1.0];
+}
+
+- (void)setLookupIntensity:(CGFloat)intensity {
+    [self.lookupDescriptor setIntensity:intensity];
+}
+
+- (void)setMaskModelPath:(NSString *)path {
+    [self.stickerDescriptor setMaskModelPath:path];
+}
+
+- (void)clearSticker {
+    [self.stickerDescriptor clear];
 }
 
 #pragma mark - delegate
