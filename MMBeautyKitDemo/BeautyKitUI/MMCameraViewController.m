@@ -38,7 +38,7 @@
     [super viewDidLoad];
     
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;
-
+    
     [self setupViews];
     // Do any additional setup after loading the view, typically from a nib.
     
@@ -64,12 +64,12 @@
     button.translatesAutoresizingMaskIntoConstraints = NO;
     [button setTitle:@"翻转" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(flipButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-
+    
     UISegmentedControl *control = [[UISegmentedControl alloc] initWithItems:@[@"美颜", @"滤镜", @"贴纸"]];
     control.selectedSegmentIndex = 0;
     control.translatesAutoresizingMaskIntoConstraints = NO;
     [control addTarget:self action:@selector(switchButtonClicked:) forControlEvents:UIControlEventValueChanged];
-
+    
     UIStackView *hStackView = [[UIStackView alloc] initWithArrangedSubviews:@[control, button]];
     hStackView.translatesAutoresizingMaskIntoConstraints = NO;
     hStackView.axis = UILayoutConstraintAxisHorizontal;
@@ -79,7 +79,7 @@
     [self.view addSubview:hStackView];
     
     [control.widthAnchor constraintEqualToConstant:120].active = YES;
-
+    
     [hStackView.heightAnchor constraintEqualToConstant:40].active = YES;
     [hStackView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:8].active = YES;
     if (@available(iOS 11.0, *)) {
@@ -94,7 +94,7 @@
     segmentView.hidden = YES;
     self.lookupView = segmentView;
     [self.view addSubview:segmentView];
-
+    
     [segmentView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor].active = YES;
     [segmentView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor].active = YES;
     [segmentView.heightAnchor constraintEqualToConstant:160].active = YES;
@@ -103,16 +103,16 @@
     } else {
         [segmentView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
     }
-
+    
     segmentView.clickedHander = ^(MMSegmentItem *item) {
         [self.render setLookupPath:item.type];
         [self.render setLookupIntensity:item.intensity];
     };
-
+    
     segmentView.sliderValueChanged = ^(MMSegmentItem *item, CGFloat intensity) {
         [self.render setLookupIntensity:intensity];
     };
-   
+    
     MMCameraTabSegmentView *segmentView2 = [[MMCameraTabSegmentView alloc] initWithFrame:CGRectZero];
     segmentView2.items = [self itemsForBeauty];
     segmentView2.backgroundColor = UIColor.clearColor;
@@ -120,7 +120,7 @@
     segmentView2.hidden = NO;
     self.beautyView = segmentView2;
     [self.view addSubview:segmentView2];
-
+    
     [segmentView2.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor].active = YES;
     [segmentView2.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor].active = YES;
     [segmentView2.heightAnchor constraintEqualToConstant:160].active = YES;
@@ -129,11 +129,11 @@
     } else {
         [segmentView2.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
     }
-
+    
     segmentView2.clickedHander = ^(MMSegmentItem *item) {
         [self.render setBeautyFactor:item.intensity forKey:item.type];
     };
-
+    
     segmentView2.sliderValueChanged = ^(MMSegmentItem *item, CGFloat intensity) {
         [self.render setBeautyFactor:intensity forKey:item.type];
     };
@@ -177,21 +177,7 @@
 - (NSArray<MMSegmentItem *> *)itemsForSticker {
     NSArray *names = @[
         @{@"name" : @"重置", @"path" : @""},
-        @{@"name" : @"满屏点赞", @"path" : @"manpingdianzan"},
-        @{@"name" : @"rainbow", @"path" : @"rainbow"},
         @{@"name" : @"手控樱花雨", @"path" : @"shoukongyinghua"},
-        @{@"name" : @"微笑", @"path" : @"weixiao"},
-        @{@"name" : @"比八", @"path" : @"biba"},
-        @{@"name" : @"拜年", @"path" : @"bainian"},
-        @{@"name" : @"抱拳", @"path" : @"baoquan"},
-        @{@"name" : @"点赞", @"path" : @"dianzan"},
-        @{@"name" : @"一个手指", @"path" : @"yigeshouzhi"},
-        @{@"name" : @"ok", @"path" : @"ok"},
-        @{@"name" : @"打电话", @"path" : @"dadianhua"},
-        @{@"name" : @"拳头", @"path" : @"quantou"},
-        @{@"name" : @"剪刀手", @"path" : @"jiandaoshou"},
-        @{@"name" : @"比心", @"path" : @"bixin"},
-        @{@"name" : @"双手比心", @"path" : @"shuangshoubixi"},
         @{@"name" : @"666", @"path" : @"666"},
         @{@"name" : @"寒冷", @"path" : @"cold"},
         @{@"name" : @"可爱", @"path" : @"cute"},
@@ -246,7 +232,7 @@
         @{@"name":@"嘴唇大小",@"type":MOUTH_SIZE,@"begin":@-1, @"end":@1},
         @{@"name":@"宽颔",@"type":JAWWIDTH, @"begin":@-1, @"end":@1},
     ];
-
+    
     NSMutableArray<MMSegmentItem *> *items = [NSMutableArray array];
     for (int i = 0; i < beautys.count; i ++) {
         MMSegmentItem *item = [[MMSegmentItem alloc] init];
@@ -262,12 +248,12 @@
 
 - (NSArray<MMSegmentItem *> *)itemsForLookup {
     NSString *lookupBundlePath = [NSBundle.mainBundle pathForResource:@"Lookup" ofType:@"bundle"];
-
+    
     NSArray *lookup = @[
         @{@"name":@"自然", @"type": @"Natural"},
         @{@"name":@"清新", @"type": @"Fresh"},
         @{@"name":@"红颜", @"type": @"Soulmate"},
-        @{@"name":@"日系", @"type": @"Sun"},
+        @{@"name":@"日系", @"type": @"SunShine"},
         @{@"name":@"少年", @"type": @"Boyhood"},
         @{@"name":@"白鹭", @"type": @"Egret"},
         @{@"name":@"复古", @"type": @"Retro"},
@@ -275,6 +261,8 @@
         @{@"name":@"野餐", @"type": @"Picnic"},
         @{@"name":@"弗洛达", @"type": @"Frida"},
         @{@"name":@"罗马", @"type": @"Rome"},
+        @{@"name":@"烧烤", @"type": @"Broil"},
+        @{@"name":@"烧烤F2", @"type": @"BroilF2"},
     ];
     
     NSMutableArray<MMSegmentItem *> *items = [NSMutableArray array];
