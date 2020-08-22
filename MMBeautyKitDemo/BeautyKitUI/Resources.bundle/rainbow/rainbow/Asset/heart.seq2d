@@ -1,0 +1,63 @@
+MOXB<?xml version="1.0" encoding="GB2312"?>
+<Img2DSequenceFrame>
+ <Node Name="heart" Type="MagicSeqFrame" FilterPath="">
+	<Img2DSequenceFrameAnimation SequenceFrameAssetType="MultTextures" TextureWidth="300" TextureHeight="300" RelativeToCurrent="0" FrameContentDir="SequenceFrameDefaultDir/heart_20200804144459" FrameCount="56" FPS="15" Reverse="0" LoopMode="0" LoopStartIndex="-1" LoopEndIndex="-1" PlayCount="1">
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/001.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/002.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/003.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/004.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/005.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/006.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/007.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/008.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/009.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/010.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/011.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/012.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/013.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/014.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/015.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/016.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/017.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/018.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/019.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/020.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/021.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/022.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/023.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/024.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/025.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/026.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/027.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/028.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/030.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/031.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/032.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/033.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/034.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/035.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/036.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/037.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/038.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/039.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/040.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/041.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/042.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/043.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/044.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/045.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/046.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/047.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/048.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/049.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/050.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/051.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/052.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/053.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/054.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/055.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/056.png" Col="1" Row="1"/>
+	 <TexturePathList TexturePath="SequenceFrameDefaultDir/heart_20200804144459/057.png" Col="1" Row="1"/>
+	</Img2DSequenceFrameAnimation>
+ </Node>
+</Img2DSequenceFrame>
