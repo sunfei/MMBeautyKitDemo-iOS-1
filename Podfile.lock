@@ -17,7 +17,7 @@ PODS:
     - MMDevice
     - MMFileService
     - MMXEngine
-  - MMBeautyMedia (1.2.0):
+  - MMBeautyMedia (1.2.2):
     - Mantle
     - MetalPetal
     - MMXEngine
@@ -37,7 +37,7 @@ PODS:
 DEPENDENCIES:
   - MetalPetal (= 1.10.5)
   - MMBeautyKit (= 1.2.0)
-  - MMBeautyMedia (= 1.2.0)
+  - MMBeautyMedia (= 1.2.2)
   - MMXEngine (= 4.4.4)
 
 SPEC REPOS:
@@ -64,7 +64,7 @@ SPEC CHECKSUMS:
   MCCSecret: 5658f66290969726586eddbdfe45e27731dbfa17
   MetalPetal: e709c2cd4116c0eb09f9b9f1822353ebe769b824
   MMBeautyKit: 2b2e99047bf21de6b14c434427f2d05a3f34c360
-  MMBeautyMedia: 9a335af19d6c362c176aac9c84efeef6025f21a8
+  MMBeautyMedia: 96fee25c8220a0083d5ad75db08427d1326adfb2
   MMCV: 45c9f6a33419f8c3661615832f14dfb4f0ff6043
   MMDevice: 8fdf446c7aedc2243918eabcf66f1c84f362931e
   MMFileService: 4112b6ddb95c3612731044e300bae12accff3b8e
@@ -74,6 +74,6 @@ SPEC CHECKSUMS:
   protobuf-lib: 72e5ad47507bf0457298db2ae4c34a935f2eab73
   ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
-PODFILE CHECKSUM: c84083b6fd27570a78a0fec0132707af3a5c4038
+PODFILE CHECKSUM: c1f1ff949c5920f5a385ffdffce681e26e96e8d5
 
 COCOAPODS: 1.9.3
