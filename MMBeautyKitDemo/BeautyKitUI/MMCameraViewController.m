@@ -177,7 +177,6 @@
 - (NSArray<MMSegmentItem *> *)itemsForSticker {
     NSArray *names = @[
         @{@"name" : @"重置", @"path" : @""},
-        @{@"name" : @"满屏点赞", @"path" : @"manpingdianzan"},
         @{@"name" : @"rainbow", @"path" : @"rainbow"},
         @{@"name" : @"手控樱花雨", @"path" : @"shoukongyinghua"},
         @{@"name" : @"微笑", @"path" : @"weixiao"},
