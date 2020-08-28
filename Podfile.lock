@@ -28,7 +28,7 @@ PODS:
     - ZipArchive
   - MMDevice (1.0.0)
   - MMFileService (1.3.1)
-  - MMXEngine (4.4.4)
+  - MMXEngine (4.4.4-20200827.1913)
   - openssl-lib (1.0.1)
   - PhotonHTTPDNS (1.0.1)
   - protobuf-lib (3.6.1)
@@ -38,7 +38,7 @@ DEPENDENCIES:
   - MetalPetal (= 1.10.5)
   - MMBeautyKit (= 1.2.0)
   - MMBeautyMedia (= 1.2.2)
-  - MMXEngine (= 4.4.4)
+  - MMXEngine (= 4.4.4-20200827.1913)
 
 SPEC REPOS:
   https://github.com/cosmos33/MMSpecs.git:
@@ -68,12 +68,12 @@ SPEC CHECKSUMS:
   MMCV: 45c9f6a33419f8c3661615832f14dfb4f0ff6043
   MMDevice: 8fdf446c7aedc2243918eabcf66f1c84f362931e
   MMFileService: 4112b6ddb95c3612731044e300bae12accff3b8e
-  MMXEngine: 59be02b571db760313f49662cbaeacfbab2072a5
+  MMXEngine: 731cdfc6220054e5829a21bacc0895b34cc6b494
   openssl-lib: e3f61a10280caf261c0e4c6b3e720aa94825f07a
   PhotonHTTPDNS: f2d67b2f6008451c5dce51e15171e2be50f58554
   protobuf-lib: 72e5ad47507bf0457298db2ae4c34a935f2eab73
   ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
-PODFILE CHECKSUM: c1f1ff949c5920f5a385ffdffce681e26e96e8d5
+PODFILE CHECKSUM: 9f46a5cf5e1cdd770659518baa3777fd1d6f8c75
 
 COCOAPODS: 1.9.3

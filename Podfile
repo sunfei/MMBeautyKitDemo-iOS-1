@@ -8,7 +8,7 @@ platform :ios, '10.0'
 
 target 'MMBeautyKitDemo' do
 
-  pod 'MMXEngine', '4.4.4'
+  pod 'MMXEngine', '4.4.4-20200827.1913'
   pod 'MetalPetal', '1.10.5', :modular_headers => true
   pod 'MMBeautyKit', '1.2.0'
   pod 'MMBeautyMedia', '1.2.2'
