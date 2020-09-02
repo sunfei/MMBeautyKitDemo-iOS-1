@@ -23,6 +23,8 @@
 		7661056E24EAC21500B89BF5 /* Lookup.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7661056C24EAC20F00B89BF5 /* Lookup.bundle */; };
 		7661056F24EAC21500B89BF5 /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7661056D24EAC21500B89BF5 /* Resources.bundle */; };
 		766CDFE424FF7BCD0069EDF8 /* MMTXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 766CDFE324FF7BCD0069EDF8 /* MMTXViewController.m */; };
+		76AD241824FFAE220066ED57 /* MMGLPixelBufferOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AD241724FFAE220066ED57 /* MMGLPixelBufferOutput.m */; };
+		76AD241B24FFAE610066ED57 /* MMGLPixelBufferInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AD241A24FFAE610066ED57 /* MMGLPixelBufferInput.m */; };
 		D88E78DB864817D116B18BD4 /* libPods-MMBeautyKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3480AA742BEB22E878E4E652 /* libPods-MMBeautyKitDemo.a */; };
 		FAADCF0424C84118001D83BC /* MMCameraTabSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAADCF0324C84118001D83BC /* MMCameraTabSegmentView.m */; };
 /* End PBXBuildFile section */
@@ -63,6 +65,10 @@
 		7661056D24EAC21500B89BF5 /* Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resources.bundle; sourceTree = "<group>"; };
 		766CDFE224FF7BCD0069EDF8 /* MMTXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTXViewController.h; sourceTree = "<group>"; };
 		766CDFE324FF7BCD0069EDF8 /* MMTXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTXViewController.m; sourceTree = "<group>"; };
+		76AD241624FFAE220066ED57 /* MMGLPixelBufferOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMGLPixelBufferOutput.h; sourceTree = "<group>"; };
+		76AD241724FFAE220066ED57 /* MMGLPixelBufferOutput.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMGLPixelBufferOutput.m; sourceTree = "<group>"; };
+		76AD241924FFAE610066ED57 /* MMGLPixelBufferInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMGLPixelBufferInput.h; sourceTree = "<group>"; };
+		76AD241A24FFAE610066ED57 /* MMGLPixelBufferInput.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMGLPixelBufferInput.m; sourceTree = "<group>"; };
 		C03C1CD256D70EA26DE162CC /* Pods-MMBeautyKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMBeautyKitDemo.release.xcconfig"; path = "Target Support Files/Pods-MMBeautyKitDemo/Pods-MMBeautyKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 		FAADCF0224C84118001D83BC /* MMCameraTabSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCameraTabSegmentView.h; sourceTree = "<group>"; };
 		FAADCF0324C84118001D83BC /* MMCameraTabSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCameraTabSegmentView.m; sourceTree = "<group>"; };
@@ -168,6 +174,10 @@
 				765BFD1523B309B30017239F /* MMCamera.m */,
 				766CDFE224FF7BCD0069EDF8 /* MMTXViewController.h */,
 				766CDFE324FF7BCD0069EDF8 /* MMTXViewController.m */,
+				76AD241624FFAE220066ED57 /* MMGLPixelBufferOutput.h */,
+				76AD241724FFAE220066ED57 /* MMGLPixelBufferOutput.m */,
+				76AD241924FFAE610066ED57 /* MMGLPixelBufferInput.h */,
+				76AD241A24FFAE610066ED57 /* MMGLPixelBufferInput.m */,
 			);
 			path = BeautyKitUI;
 			sourceTree = "<group>";
@@ -291,8 +301,10 @@
 				765BFD2923B309DB0017239F /* MMAssetGridViewCell.m in Sources */,
 				765BFD2C23B309DB0017239F /* MMVideoAssetsCollectionViewController.m in Sources */,
 				765BFD1F23B309C40017239F /* MMBeautyRender.m in Sources */,
+				76AD241824FFAE220066ED57 /* MMGLPixelBufferOutput.m in Sources */,
 				765BFCF023B3095B0017239F /* ViewController.m in Sources */,
 				765BFCEA23B3095B0017239F /* AppDelegate.m in Sources */,
+				76AD241B24FFAE610066ED57 /* MMGLPixelBufferInput.m in Sources */,
 				765BFCFB23B3095E0017239F /* main.m in Sources */,
 				765BFD2B23B309DB0017239F /* MMDeviceMotionObserver.m in Sources */,
 				FAADCF0424C84118001D83BC /* MMCameraTabSegmentView.m in Sources */,

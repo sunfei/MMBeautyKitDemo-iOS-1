@@ -7,6 +7,7 @@
 //
 
 #import "MMTXViewController.h"
+#import <CoreVideo/CoreVideo.h>
 #import <TXLivePush.h>
 #import <TXLiveBase.h>
 
@@ -16,6 +17,7 @@
     
     UIView *_localView;
     
+    CVOpenGLESTextureRef _texture;
     GLuint _ret;
     GLuint _fbo;
 }
@@ -25,6 +27,11 @@
 @property (nonatomic, strong) UIButton *btnBeauty;
 
 @property (nonatomic, strong) TXLivePush *pusher;
+
+@property (nonatomic) CVPixelBufferPoolRef pixelBufferPool;
+@property (nonatomic) CVOpenGLESTextureCacheRef coreVideoTextureCache;
+
+@property (nonatomic,strong) CIContext *ciContext;
 
 @end
 
@@ -235,31 +242,6 @@
             [self.pusher setMute:NO];
             [self.pusher showVideoDebugLog:NO];
             [self.pusher setMirror:NO];
-//            BOOL isWifi = YES;
-//            if (!isWifi) {
-//                __weak __typeof(self) weakSelf = self;
-//                [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-//                    if (weakSelf.pushUrl.length == 0) {
-//                        return;
-//                    }
-//                    if (status == AFNetworkReachabilityStatusReachableViaWiFi) {
-//                        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@""
-//                                                                                       message:@"您要切换到WiFi再推流吗?"
-//                                                                                preferredStyle:UIAlertControllerStyleAlert];
-//                        [alert addAction:[UIAlertAction actionWithTitle:@"是" style:UIAlertActionStyleDefault handler:^(UIAlertAction *_Nonnull action) {
-//                            [alert dismissViewControllerAnimated:YES completion:nil];
-//
-//                            // 先暂停，再重新推流
-//                            [weakSelf.pusher stopPush];
-//                            [weakSelf.pusher startPush:weakSelf.pushUrl];
-//                        }]];
-//                        [alert addAction:[UIAlertAction actionWithTitle:@"否" style:UIAlertActionStyleCancel handler:^(UIAlertAction *_Nonnull action) {
-//                            [alert dismissViewControllerAnimated:YES completion:nil];
-//                        }]];
-//                        [weakSelf presentViewController:alert animated:YES completion:nil];
-//                    }
-//                }];
-//            }
         } else if (evtID == PUSH_WARNING_NET_BUSY) {
             NSLog(@"您当前的网络环境不佳，请尽快更换网络保证正常直播");
         }
@@ -273,17 +255,101 @@
     NSLog(@"param = %@", param);
 }
 
+#pragma mark - pixelbuffer
+
+- (void)createPixelBufferPoolWithPixelBufferSizeIfNeeded:(CGSize)size {
+    if (self.pixelBufferPool) {
+        NSDictionary *pixelBufferPoolAttributes = (__bridge NSDictionary *)(CVPixelBufferPoolGetPixelBufferAttributes(self.pixelBufferPool));
+        if ([pixelBufferPoolAttributes[(id)kCVPixelBufferWidthKey] integerValue] == (NSInteger)size.width &&
+            [pixelBufferPoolAttributes[(id)kCVPixelBufferHeightKey] integerValue] == (NSInteger)size.height) {
+            return;
+        }
+    }
+    
+    if (self.pixelBufferPool) {
+        CVPixelBufferPoolRelease(self.pixelBufferPool);
+        self.pixelBufferPool = NULL;
+    }
+    
+    CVPixelBufferPoolRef outputPool = NULL;
+    NSDictionary *sourcePixelBufferOptions = @{(id)kCVPixelBufferPixelFormatTypeKey : @(kCVPixelFormatType_32BGRA),
+                                               (id)kCVPixelBufferWidthKey : @(size.width),
+                                               (id)kCVPixelBufferHeightKey : @(size.height),
+                                               (id)kCVPixelFormatOpenGLESCompatibility : @(YES),
+                                               (id)kCVPixelBufferIOSurfacePropertiesKey : @{ /*empty dictionary*/ }};
+    NSDictionary *pixelBufferPoolOptions = @{ (id)kCVPixelBufferPoolMinimumBufferCountKey: @(30)};
+    
+    CVPixelBufferPoolCreate(kCFAllocatorDefault, (__bridge CFDictionaryRef)pixelBufferPoolOptions, (__bridge CFDictionaryRef)sourcePixelBufferOptions, &outputPool);
+    self.pixelBufferPool = outputPool;
+}
+
 #pragma mark - TXVideoCustomProcessDelegate methods
 
+- (CVOpenGLESTextureCacheRef)coreVideoTextureCache {
+    if (_coreVideoTextureCache == NULL) {
+#if defined(__IPHONE_6_0)
+        CVReturn err = CVOpenGLESTextureCacheCreate(kCFAllocatorDefault, NULL, [EAGLContext currentContext], NULL, &_coreVideoTextureCache);
+#else
+        CVReturn err = CVOpenGLESTextureCacheCreate(kCFAllocatorDefault, NULL, (__bridge void *)[EAGLContext currentContext], NULL, &_coreVideoTextureCache);
+#endif
+        
+        if (err) {
+            NSAssert(NO, @"Error at CVOpenGLESTextureCacheCreate %d", err);
+        }
+        
+    }
+    
+    return _coreVideoTextureCache;
+}
+
 - (GLuint)onPreProcessTexture:(GLuint)texture width:(CGFloat)width height:(CGFloat)height {
+    
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    if (!self.ciContext) {
+        self.ciContext = [CIContext contextWithEAGLContext:[EAGLContext currentContext] options:@{(id)kCIContextWorkingColorSpace : (__bridge id)colorSpace}];
+    }
+    CIImage *image = [CIImage imageWithTexture:texture size:CGSizeMake(width, height) flipped:NO colorSpace:colorSpace];
+    CGColorSpaceRelease(colorSpace);
+    
+//    [self createPixelBufferPoolWithPixelBufferSizeIfNeeded:CGSizeMake(width, height)];
+//
+//    CVPixelBufferRef pixelBuffer = NULL;
+//    CVReturn err = CVPixelBufferPoolCreatePixelBufferWithAuxAttributes(kCFAllocatorDefault, self.pixelBufferPool, (__bridge CFDictionaryRef)(@{(id)kCVPixelBufferPoolAllocationThresholdKey : @30}), &pixelBuffer);
+//    if (err || pixelBuffer == NULL) {
+//        pixelBuffer = NULL;
+//        if (err || pixelBuffer == NULL) {
+//            pixelBuffer = NULL;
+//            if ( err == kCVReturnWouldExceedAllocationThreshold ) {
+//                CVOpenGLESTextureCacheFlush(self.coreVideoTextureCache, 0);
+//            } else {
+//                NSLog(@"%@: Error at CVPixelBufferPoolCreatePixelBuffer %@", self, @(err));
+//            }
+//            return 0;
+//        }
+//    }
+//
+//    if (_texture) {
+//        CFRelease(_texture);
+//    }
+//    CVOpenGLESTextureCacheCreateTextureFromImage(kCFAllocatorDefault, self.coreVideoTextureCache, pixelBuffer,
+//                                                 NULL, // texture attributes
+//                                                 GL_TEXTURE_2D,
+//                                                 GL_RGBA, // opengl format
+//                                                 (GLint)width,
+//                                                 (GLint)height,
+//                                                 GL_BGRA, // native iOS format
+//                                                 GL_UNSIGNED_BYTE,
+//                                                 0,
+//                                                 &_texture);
+//    glBindTexture(CVOpenGLESTextureGetTarget(_texture), CVOpenGLESTextureGetName(_texture));
     
     glDeleteTextures(1, &_ret);
     glGenTextures(1, &_ret);
     glBindTexture(GL_TEXTURE_2D, _ret);
     
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, NULL);
-    
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
@@ -294,18 +360,22 @@
     glBindFramebuffer(GL_FRAMEBUFFER, _fbo);
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, _ret, 0);
     glViewport(0, 0, width, height);
-    
+
     glClearColor(1.0, 1.0, 0.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
     
+    [self.ciContext drawImage:image inRect:CGRectMake(0, 0, width, height) fromRect:image.extent];
+
     glFlush();
+//    CVPixelBufferRelease(pixelBuffer);
     
-    return texture;
+    return _ret;
 }
 
 - (void)onTextureDestoryed {
     glDeleteFramebuffers(1, &_fbo);
     glDeleteTextures(1, &_ret);
+//    CVOpenGLESTextureCacheFlush(self.coreVideoTextureCache, 0);
 }
 
 #pragma mark - notification methods
