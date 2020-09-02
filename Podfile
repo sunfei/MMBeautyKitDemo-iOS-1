@@ -12,6 +12,7 @@ target 'MMBeautyKitDemo' do
   pod 'MetalPetal', '1.10.5', :modular_headers => true
   pod 'MMBeautyKit', '1.2.0'
   pod 'MMBeautyMedia', '1.2.2'
+  pod 'PLMediaStreamingKit'
 end
 
 post_install do |installer|

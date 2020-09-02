@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "MMCameraViewController.h"
 #import "MMVideoAssetsCollectionViewController.h"
+#import "MMQiNiuViewController.h"
 @import Photos;
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -24,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.items = @[@"相机"];
+    self.items = @[@"相机", @"七牛"];
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -51,7 +52,7 @@
         [self.navigationController pushViewController:vc animated:YES];
         }
             break;
-        case 1:
+        case 2:
         {
         
         void (^pushVC)(void) = ^{
@@ -87,6 +88,11 @@
         }
         }
             break;
+        case 1: {
+            MMQiNiuViewController *qiniuVC = [MMQiNiuViewController new];
+            [self.navigationController pushViewController:qiniuVC animated:true];
+            break;
+        }
             
         default:
             break;
