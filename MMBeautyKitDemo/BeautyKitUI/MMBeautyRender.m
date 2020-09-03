@@ -46,6 +46,8 @@
         
         _stickerDescriptor = [[MMRenderFilterStickerModule alloc] init];
         [render registerModule:_stickerDescriptor];
+        
+        [_stickerDescriptor setMaskModelPath:[[NSBundle.mainBundle pathForResource:@"Resources" ofType:@"bundle"] stringByAppendingPathComponent:@"666"]];
     }
     return self;
 }
