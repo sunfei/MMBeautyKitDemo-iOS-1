@@ -32,7 +32,6 @@
     [self.view addSubview:self.session.previewView];
 
     [self setupViews];
-    [self add];
     // Do any additional setup after loading the view.
 }
 
@@ -49,53 +48,7 @@
     }];
 }
 
-- (void)add{
-    if (![UIDevice currentDevice].generatesDeviceOrientationNotifications) {
-        [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-    }
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleDeviceOrientationChange:)
-                                                name:UIDeviceOrientationDidChangeNotification object:nil];
-}
 
-
-
-- (void)handleDeviceOrientationChange:(NSNotification *)notifi{
-    UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
-        switch (deviceOrientation) {
-            case UIDeviceOrientationFaceUp:
-                NSLog(@"faceup");
-                break;
-            case UIDeviceOrientationFaceDown:
-                NSLog(@"屏幕朝下平躺");
-                break;
-            case UIDeviceOrientationUnknown:
-                NSLog(@"未知方向");
-                break;
-            case UIDeviceOrientationLandscapeLeft:{
-                NSLog(@"屏幕向左横置");
-                self.render.cameraRotate = MMRenderModuleCameraRotate180;
-                }
-                break;
-            case UIDeviceOrientationLandscapeRight:
-                self.render.cameraRotate = MMRenderModuleCameraRotate270;
-
-                NSLog(@"屏幕向右橫置");
-                break;
-            case UIDeviceOrientationPortrait:
-                self.render.cameraRotate = MMRenderModuleCameraRotate0;
-                NSLog(@"Portrait");
-
-                break;
-            case UIDeviceOrientationPortraitUpsideDown:
-                self.render.cameraRotate = MMRenderModuleCameraRotate90;
-                NSLog(@"UpsideDown");
-
-                break;
-            default:
-                
-                break;
-        }
-}
 
 - (void)flipButtonTapped:(UIButton*)btn{
     if(self.session.captureDevicePosition == AVCaptureDevicePositionFront){
@@ -103,9 +56,6 @@
     }else{
         self.session.captureDevicePosition = AVCaptureDevicePositionFront;
     }
-}
-
-- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
 }
 
 #pragma mark - lifestyle
