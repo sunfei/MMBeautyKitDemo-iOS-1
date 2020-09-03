@@ -404,6 +404,8 @@
         if ([self startPush]) {
             [btn setBackgroundColor:UIColor.redColor];
             [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+        } else {
+            [self.pusher stopPreview];
         }
     }
 }
