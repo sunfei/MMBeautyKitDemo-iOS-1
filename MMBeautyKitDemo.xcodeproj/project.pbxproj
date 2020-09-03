@@ -475,6 +475,7 @@
 					"$(PROJECT_DIR)/MMBeautyKitDemo/BeautyKit",
 				);
 				INFOPLIST_FILE = MMBeautyKitDemo/Info.plist;
+				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -500,6 +501,7 @@
 					"$(PROJECT_DIR)/MMBeautyKitDemo/BeautyKit",
 				);
 				INFOPLIST_FILE = MMBeautyKitDemo/Info.plist;
+				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
