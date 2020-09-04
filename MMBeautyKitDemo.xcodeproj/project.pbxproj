@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		76513FBA250109B70070D8D5 /* MMTXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 766CDFE324FF7BCD0069EDF8 /* MMTXViewController.m */; };
 		76513FBB250109B70070D8D5 /* MMQiNiuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFB40B624FF71C700EBCEC4 /* MMQiNiuViewController.m */; };
 		76513FBC250109BA0070D8D5 /* MMBeautyRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 765BFD1C23B309C40017239F /* MMBeautyRender.m */; };
+		7651593B25021DEF0070D8D5 /* MMCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765BFD2623B309DB0017239F /* MMCameraViewController.m */; };
 		765BFCEA23B3095B0017239F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 765BFCE923B3095B0017239F /* AppDelegate.m */; };
 		765BFCED23B3095B0017239F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 765BFCEC23B3095B0017239F /* SceneDelegate.m */; };
 		765BFCF023B3095B0017239F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765BFCEF23B3095B0017239F /* ViewController.m */; };
@@ -188,7 +189,7 @@
 				765BFCE223B3095B0017239F /* Frameworks */,
 				765BFCE323B3095B0017239F /* Resources */,
 				733FBB7D938391A35E69C220 /* [CP] Embed Pods Frameworks */,
-				069174D65344C9DC9ACD2046 /* [CP] Copy Pods Resources */,
+				B8F4A381B98A05E4884B4429 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,23 +248,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		069174D65344C9DC9ACD2046 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MMBeautyKitDemo/Pods-MMBeautyKitDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MMBeautyKitDemo/Pods-MMBeautyKitDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MMBeautyKitDemo/Pods-MMBeautyKitDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		18C31CB655B06548B6554C19 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -303,6 +287,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MMBeautyKitDemo/Pods-MMBeautyKitDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B8F4A381B98A05E4884B4429 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MMBeautyKitDemo/Pods-MMBeautyKitDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MMBeautyKitDemo/Pods-MMBeautyKitDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MMBeautyKitDemo/Pods-MMBeautyKitDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -318,6 +319,7 @@
 				765BFCEA23B3095B0017239F /* AppDelegate.m in Sources */,
 				765BFCFB23B3095E0017239F /* main.m in Sources */,
 				765BFD2B23B309DB0017239F /* MMDeviceMotionObserver.m in Sources */,
+				7651593B25021DEF0070D8D5 /* MMCameraViewController.m in Sources */,
 				76513FBA250109B70070D8D5 /* MMTXViewController.m in Sources */,
 				FAADCF0424C84118001D83BC /* MMCameraTabSegmentView.m in Sources */,
 				765BFCED23B3095B0017239F /* SceneDelegate.m in Sources */,
