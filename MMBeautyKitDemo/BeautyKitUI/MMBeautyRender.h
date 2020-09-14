@@ -18,6 +18,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MMBeautyRender : NSObject
 
+- (void)addBeauty;
+- (void)removeBeauty;
+
+- (void)addLookup;
+- (void)removeLookup;
+
+- (void)addSticker;
+- (void)removeSticker;
+
 // 如果是相机，需要传入前置/后置位置, 该参数仅在相机模式下设置
 @property (nonatomic, assign) AVCaptureDevicePosition devicePosition;
 

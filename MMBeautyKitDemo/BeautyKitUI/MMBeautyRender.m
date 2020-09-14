@@ -50,6 +50,36 @@
     return self;
 }
 
+- (void)addBeauty {
+    _beautyDescriptor = [[MMRenderFilterBeautyModule alloc] init];
+    [_render registerModule:_beautyDescriptor];
+}
+
+- (void)removeBeauty {
+    [_render unregisterModule:_beautyDescriptor];
+    _beautyDescriptor = nil;
+}
+
+- (void)addLookup {
+    _lookupDescriptor = [[MMRenderFilterLookupModule alloc] init];
+    [_render registerModule:_lookupDescriptor];
+}
+
+- (void)removeLookup {
+    [_render unregisterModule:_lookupDescriptor];
+    _lookupDescriptor = nil;
+}
+
+- (void)addSticker {
+    _stickerDescriptor = [[MMRenderFilterStickerModule alloc] init];
+    [_render registerModule:_stickerDescriptor];
+}
+
+- (void)removeSticker {
+    [_render unregisterModule:_stickerDescriptor];
+    _stickerDescriptor = nil;
+}
+
 - (CVPixelBufferRef _Nullable)renderPixelBuffer:(CVPixelBufferRef)pixelBuffer
                                           error:(NSError * __autoreleasing _Nullable *)error {
     return [self.render renderFrame:pixelBuffer error:error];

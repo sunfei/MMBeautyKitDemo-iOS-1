@@ -173,6 +173,46 @@
     
     segmentView3.sliderValueChanged = ^(MMSegmentItem *item, CGFloat intensity) {
     };
+    
+    UIView *beautyBtn = [self viewForSwitch:@"美颜开关" selectorName:@"beautyButton:"];
+    [self.view addSubview:beautyBtn];
+    [beautyBtn.topAnchor constraintEqualToAnchor:hStackView.bottomAnchor constant:8].active = YES;
+    [beautyBtn.leadingAnchor constraintEqualToAnchor:hStackView.leadingAnchor].active = YES;
+    
+    UIView *lookupButton = [self viewForSwitch:@"滤镜开关" selectorName:@"lookupButton:"];
+    [self.view addSubview:lookupButton];
+    [lookupButton.topAnchor constraintEqualToAnchor:beautyBtn.bottomAnchor constant:8].active = YES;
+    [lookupButton.leadingAnchor constraintEqualToAnchor:beautyBtn.leadingAnchor].active = YES;
+    
+    UIView *stickerBtn = [self viewForSwitch:@"贴纸开关" selectorName:@"stickerButton:"];
+    [self.view addSubview:stickerBtn];
+    [stickerBtn.topAnchor constraintEqualToAnchor:lookupButton.bottomAnchor constant:8].active = YES;
+    [stickerBtn.leadingAnchor constraintEqualToAnchor:lookupButton.leadingAnchor].active = YES;
+    
+}
+
+- (void)stickerButton:(UISwitch *)switchBtn {
+    if (switchBtn.isOn) {
+        [self.render addSticker];
+    } else {
+        [self.render removeSticker];
+    }
+}
+
+- (void)lookupButton:(UISwitch *)switchBtn {
+    if (switchBtn.isOn) {
+        [self.render addLookup];
+    } else {
+        [self.render removeLookup];
+    }
+}
+
+- (void)beautyButton:(UISwitch *)switchBtn {
+    if (switchBtn.isOn) {
+        [self.render addBeauty];
+    } else {
+        [self.render removeBeauty];
+    }
 }
 
 - (void)switchButtonClicked:(UISegmentedControl *)control {
@@ -295,6 +335,30 @@
         [items addObject:item];
     }
     return items.copy;
+}
+
+- (UIView *)viewForSwitch:(NSString *)title selectorName:(NSString *)name {
+    UILabel *label = [[UILabel alloc] init];
+    label.translatesAutoresizingMaskIntoConstraints = NO;
+    label.text = title;
+    label.textColor = UIColor.redColor;
+    
+    UISwitch *switchBtn = [[UISwitch alloc] init];
+    switchBtn.translatesAutoresizingMaskIntoConstraints = NO;
+    switchBtn.on = YES;
+    [switchBtn addTarget:self action:NSSelectorFromString(name) forControlEvents:UIControlEventValueChanged];
+    
+    UIStackView *stackView = [[UIStackView alloc] initWithArrangedSubviews:@[label, switchBtn]];
+    stackView.translatesAutoresizingMaskIntoConstraints = NO;
+    stackView.axis = UILayoutConstraintAxisHorizontal;
+    stackView.spacing = 8;
+    stackView.alignment = UIStackViewAlignmentCenter;
+    stackView.distribution = UIStackViewDistributionFill;
+    
+    [stackView.widthAnchor constraintEqualToConstant:130].active = YES;
+    [stackView.heightAnchor constraintEqualToConstant:40].active = YES;
+    
+    return stackView;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
