@@ -9,9 +9,33 @@ platform :ios, '10.0'
 target 'MMBeautyKitDemo' do
 
   pod 'MetalPetal/Static', '1.13.0', :modular_headers => true
-#  pod 'MMBeautyKit', '1.2.2'
-pod 'MMBeautyKit', :path => '../MMBeautyKit-iOS-1/MMBeautyKitLevel5/'
-pod 'MMBeautyMedia', :path => '../MMBeautyMedia-iOS/'
+
+# 版本5
+#pod 'MMBeautyKit', :path => '../MMBeautyKit-iOS-1/MMBeautyKitLevel5/'
+#pod 'MMBeautyMedia/Beauty', :path => '../MMBeautyMedia-iOS'
+#pod 'MMBeautyMedia/Filter', :path => '../MMBeautyMedia-iOS'
+#pod 'MMBeautyMedia/Sticker', :path => '../MMBeautyMedia-iOS'
+
+# 版本4
+#pod 'MMBeautyKit', :path => '../MMBeautyKit-iOS-1/MMBeautyKitLevel4/'
+#pod 'MMBeautyMedia/Beauty', :path => '../MMBeautyMedia-iOS'
+#pod 'MMBeautyMedia/Filter', :path => '../MMBeautyMedia-iOS'
+
+# 版本3
+#pod 'MMBeautyKit', :path => '../MMBeautyKit-iOS-1/MMBeautyKitLevel3/'
+#pod 'MMBeautyMedia/Beauty', :path => '../MMBeautyMedia-iOS'
+#pod 'MMBeautyMedia/Filter', :path => '../MMBeautyMedia-iOS'
+#pod 'MMBeautyMedia/Sticker', :path => '../MMBeautyMedia-iOS'
+
+# 版本2
+#pod 'MMBeautyKit', :path => '../MMBeautyKit-iOS-1/MMBeautyKitLevel2/'
+#pod 'MMBeautyMedia/Beauty', :path => '../MMBeautyMedia-iOS'
+#pod 'MMBeautyMedia/Filter', :path => '../MMBeautyMedia-iOS'
+
+# 版本1
+#pod 'MMBeautyKit', :path => '../MMBeautyKit-iOS-1/MMBeautyKitLevel1/'
+#pod 'MMBeautyMedia/Beauty', :path => '../MMBeautyMedia-iOS'
+
 pod 'MMCV', :git => 'https://github.com/ybhjx1314/MMCV', :branch => 'MMVC-MMVideoSDK'
   
   # 解决HTTPDNS过大问题
