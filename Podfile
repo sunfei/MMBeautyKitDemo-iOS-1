@@ -8,11 +8,14 @@ platform :ios, '10.0'
 
 target 'MMBeautyKitDemo' do
 
-  pod 'MetalPetal', '1.10.5', :modular_headers => true
-  pod 'MMBeautyKit', '1.2.2'
+  pod 'MetalPetal/Static', '1.13.0', :modular_headers => true
+#  pod 'MMBeautyKit', '1.2.2'
+pod 'MMBeautyKit', :path => '../MMBeautyKit-iOS-1/MMBeautyKitLevel5/'
+pod 'MMBeautyMedia', :path => '../MMBeautyMedia-iOS/'
+pod 'MMCV', :git => 'https://github.com/ybhjx1314/MMCV', :branch => 'MMVC-MMVideoSDK'
   
   # 解决HTTPDNS过大问题
-  pod 'PhotonHTTPDNS','1.0.2'
+#  pod 'PhotonHTTPDNS','1.0.2'
   
   # 七牛直播推流
   pod 'PLMediaStreamingKit'
