@@ -12,28 +12,18 @@ target 'MMBeautyKitDemo' do
 
 # 版本5
 pod 'MMBeautyKit', '2.0.0-Interact'
-pod 'MMBeautyMedia', '2.0.0', :subspecs => ['Beauty', 'Filter', 'Sticker']
-pod 'MMCV','2.1.0-MMVideoSDK',:source=>'https://github.com/cosmos33/MMSpecs.git'
 
 # 版本4
 #pod 'MMBeautyKit', '2.0.0-Micro-surgery'
-#pod 'MMBeautyMedia', '2.0.0', :subspecs => ['Beauty', 'Filter']
-#pod 'MMCV','2.1.1-MMVideoSDK',:source=>'https://github.com/cosmos33/MMSpecs.git'
 
 # 版本3
 #pod 'MMBeautyKit', '2.0.0-Sticker'
-#pod 'MMBeautyMedia', '2.0.0', :subspecs => ['Beauty', 'Filter', 'Sticker']
-#pod 'MMCV','2.1.1-MMVideoSDK',:source=>'https://github.com/cosmos33/MMSpecs.git'
 
 # 版本2
 #pod 'MMBeautyKit', '2.0.0-Filter'
-#pod 'MMBeautyMedia', '2.0.0', :subspecs => ['Beauty', 'Filter']
-#pod 'MMCV','2.1.1-MMVideoSDK',:source=>'https://github.com/cosmos33/MMSpecs.git'
 
 # 版本1
 #pod 'MMBeautyKit', '2.0.0-Basic'
-#pod 'MMBeautyMedia', '2.0.0', :subspecs => ['Beauty']
-#pod 'MMCV','2.1.1-MMVideoSDK',:source=>'https://github.com/cosmos33/MMSpecs.git'
 
   # 七牛直播推流
   pod 'PLMediaStreamingKit'
