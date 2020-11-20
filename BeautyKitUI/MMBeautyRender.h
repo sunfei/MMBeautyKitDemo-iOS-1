@@ -49,6 +49,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (CVPixelBufferRef _Nullable)renderPixelBuffer:(CVPixelBufferRef)pixelBuffer
                                           error:(NSError * __autoreleasing _Nullable *)error;
 
+- (MTIImage *_Nullable)renderToImage:(CVPixelBufferRef)pixelBuffer error:(NSError * __autoreleasing _Nullable *)error;
+
 @end
 
 NS_ASSUME_NONNULL_END

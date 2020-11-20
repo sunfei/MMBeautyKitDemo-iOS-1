@@ -110,6 +110,10 @@
     return [self.render renderFrame:pixelBuffer error:error];
 }
 
+- (MTIImage *_Nullable)renderToImage:(CVPixelBufferRef)pixelBuffer error:(NSError * __autoreleasing _Nullable *)error {
+    return [self.render renderFrameToImage:pixelBuffer error:error];
+}
+
 - (void)setInputType:(MMRenderInputType)inputType {
     self.render.inputType = inputType;
 }

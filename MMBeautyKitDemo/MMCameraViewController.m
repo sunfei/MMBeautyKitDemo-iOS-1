@@ -380,15 +380,22 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     if (pixelBuffer) {
         
         NSError *error = nil;
-        CVPixelBufferRef renderedPixelBuffer = [self.render renderPixelBuffer:pixelBuffer error:&error];
-        if (!renderedPixelBuffer || error) {
-            NSLog(@"error: %@", error);
-        } else {
-            MTIImage *image = [[MTIImage alloc] initWithCVPixelBuffer:renderedPixelBuffer alphaType:MTIAlphaTypeAlphaIsOne];
+//        CVPixelBufferRef renderedPixelBuffer = [self.render renderPixelBuffer:pixelBuffer error:&error];
+//        if (!renderedPixelBuffer || error) {
+//            NSLog(@"error: %@", error);
+//        } else {
+//            MTIImage *image = [[MTIImage alloc] initWithCVPixelBuffer:renderedPixelBuffer alphaType:MTIAlphaTypeAlphaIsOne];
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                self.previewView.image = image;
+//            });
+//        }
+        MTIImage *image = [self.render renderToImage:pixelBuffer error:&error];
+        if (image) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.previewView.image = image;
             });
         }
+        
     }
 }
 
