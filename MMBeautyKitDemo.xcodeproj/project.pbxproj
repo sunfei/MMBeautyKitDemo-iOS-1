@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37B508E0FB1BF07832E83AAD /* libPods-MMTXBeautyKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D54CFF22297434734B2B229 /* libPods-MMTXBeautyKitDemo.a */; };
-		44CF7CF5B264583A0FF9791E /* libPods-MMQNBeautyKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 727E886D118A5E7BEF0C7702 /* libPods-MMQNBeautyKitDemo.a */; };
+		1BF44D86928A4B080E78C8A8 /* libPods-MMBeautyKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E75224C95661A9D5402947C /* libPods-MMBeautyKitDemo.a */; };
+		47571F9FF02BF57EA51F326C /* libPods-MMTXBeautyKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F75397D09AB27865EB9564 /* libPods-MMTXBeautyKitDemo.a */; };
 		76513FBC250109BA0070D8D5 /* MMBeautyRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 765BFD1C23B309C40017239F /* MMBeautyRender.m */; };
 		7651593B25021DEF0070D8D5 /* MMCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765BFD2623B309DB0017239F /* MMCameraViewController.m */; };
 		765BFCEA23B3095B0017239F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 765BFCE923B3095B0017239F /* AppDelegate.m */; };
@@ -50,17 +50,14 @@
 		76F98CB7254986D00020F4F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F98CB6254986D00020F4F6 /* Assets.xcassets */; };
 		76F98CBA254986D00020F4F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F98CB8254986D00020F4F6 /* LaunchScreen.storyboard */; };
 		76F98CBD254986D00020F4F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F98CBC254986D00020F4F6 /* main.m */; };
-		83F40896EF39543EADD84E2E /* libPods-MMBeautyKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC067FA32AAD50E40FECAD5 /* libPods-MMBeautyKitDemo.a */; };
+		CE6EC9678350CD412B796F32 /* libPods-MMQNBeautyKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B77607DB593946CFAE44F4 /* libPods-MMQNBeautyKitDemo.a */; };
 		FAADCF0424C84118001D83BC /* MMCameraTabSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAADCF0324C84118001D83BC /* MMCameraTabSegmentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0F6F2E02C32BDAEF9CDE3616 /* Pods-MMQNBeautyKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMQNBeautyKitDemo.release.xcconfig"; path = "Target Support Files/Pods-MMQNBeautyKitDemo/Pods-MMQNBeautyKitDemo.release.xcconfig"; sourceTree = "<group>"; };
-		1CC067FA32AAD50E40FECAD5 /* libPods-MMBeautyKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMBeautyKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DA61CE0EBC93B739AC6D44B /* Pods-MMTXBeautyKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMTXBeautyKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-MMTXBeautyKitDemo/Pods-MMTXBeautyKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		40CB81A941EA8A6FDBB7CF28 /* Pods-MMBeautyKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMBeautyKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-MMBeautyKitDemo/Pods-MMBeautyKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		4D54CFF22297434734B2B229 /* libPods-MMTXBeautyKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMTXBeautyKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		727E886D118A5E7BEF0C7702 /* libPods-MMQNBeautyKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMQNBeautyKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FDA620736126B31A05DC8AB /* Pods-MMQNBeautyKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMQNBeautyKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-MMQNBeautyKitDemo/Pods-MMQNBeautyKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		45B77607DB593946CFAE44F4 /* libPods-MMQNBeautyKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMQNBeautyKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68F0B47324477B17E05D92AE /* Pods-MMBeautyKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMBeautyKitDemo.release.xcconfig"; path = "Target Support Files/Pods-MMBeautyKitDemo/Pods-MMBeautyKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 		76513FB4250103210070D8D5 /* ExportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ExportOptions.plist; sourceTree = "<group>"; };
 		76513FB5250103210070D8D5 /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
 		76513FB6250103210070D8D5 /* package_upload.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = package_upload.py; sourceTree = "<group>"; };
@@ -118,9 +115,12 @@
 		76F98CB9254986D00020F4F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76F98CBB254986D00020F4F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76F98CBC254986D00020F4F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B535C018552462896553FAF0 /* Pods-MMQNBeautyKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMQNBeautyKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-MMQNBeautyKitDemo/Pods-MMQNBeautyKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		BE493988980491257E4F9E89 /* Pods-MMTXBeautyKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMTXBeautyKitDemo.release.xcconfig"; path = "Target Support Files/Pods-MMTXBeautyKitDemo/Pods-MMTXBeautyKitDemo.release.xcconfig"; sourceTree = "<group>"; };
-		C03C1CD256D70EA26DE162CC /* Pods-MMBeautyKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMBeautyKitDemo.release.xcconfig"; path = "Target Support Files/Pods-MMBeautyKitDemo/Pods-MMBeautyKitDemo.release.xcconfig"; sourceTree = "<group>"; };
+		8E75224C95661A9D5402947C /* libPods-MMBeautyKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMBeautyKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		926B64EC988A1717AAFBE79A /* Pods-MMQNBeautyKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMQNBeautyKitDemo.release.xcconfig"; path = "Target Support Files/Pods-MMQNBeautyKitDemo/Pods-MMQNBeautyKitDemo.release.xcconfig"; sourceTree = "<group>"; };
+		A6370EDBE37AC1C5B17DE5D5 /* Pods-MMTXBeautyKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMTXBeautyKitDemo.release.xcconfig"; path = "Target Support Files/Pods-MMTXBeautyKitDemo/Pods-MMTXBeautyKitDemo.release.xcconfig"; sourceTree = "<group>"; };
+		D6F75397D09AB27865EB9564 /* libPods-MMTXBeautyKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMTXBeautyKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D88520494A18AF83BC9C6D83 /* Pods-MMTXBeautyKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMTXBeautyKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-MMTXBeautyKitDemo/Pods-MMTXBeautyKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		F42C0F07547E549A32D1C879 /* Pods-MMBeautyKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMBeautyKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-MMBeautyKitDemo/Pods-MMBeautyKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		FAADCF0224C84118001D83BC /* MMCameraTabSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCameraTabSegmentView.h; sourceTree = "<group>"; };
 		FAADCF0324C84118001D83BC /* MMCameraTabSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCameraTabSegmentView.m; sourceTree = "<group>"; };
 		FAFB40B624FF71C700EBCEC4 /* MMQiNiuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMQiNiuViewController.m; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83F40896EF39543EADD84E2E /* libPods-MMBeautyKitDemo.a in Frameworks */,
+				1BF44D86928A4B080E78C8A8 /* libPods-MMBeautyKitDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44CF7CF5B264583A0FF9791E /* libPods-MMQNBeautyKitDemo.a in Frameworks */,
+				CE6EC9678350CD412B796F32 /* libPods-MMQNBeautyKitDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37B508E0FB1BF07832E83AAD /* libPods-MMTXBeautyKitDemo.a in Frameworks */,
+				47571F9FF02BF57EA51F326C /* libPods-MMTXBeautyKitDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,22 +158,22 @@
 		2A389913EC9EBE83CA3602C4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				40CB81A941EA8A6FDBB7CF28 /* Pods-MMBeautyKitDemo.debug.xcconfig */,
-				C03C1CD256D70EA26DE162CC /* Pods-MMBeautyKitDemo.release.xcconfig */,
-				B535C018552462896553FAF0 /* Pods-MMQNBeautyKitDemo.debug.xcconfig */,
-				0F6F2E02C32BDAEF9CDE3616 /* Pods-MMQNBeautyKitDemo.release.xcconfig */,
-				3DA61CE0EBC93B739AC6D44B /* Pods-MMTXBeautyKitDemo.debug.xcconfig */,
-				BE493988980491257E4F9E89 /* Pods-MMTXBeautyKitDemo.release.xcconfig */,
+				F42C0F07547E549A32D1C879 /* Pods-MMBeautyKitDemo.debug.xcconfig */,
+				68F0B47324477B17E05D92AE /* Pods-MMBeautyKitDemo.release.xcconfig */,
+				0FDA620736126B31A05DC8AB /* Pods-MMQNBeautyKitDemo.debug.xcconfig */,
+				926B64EC988A1717AAFBE79A /* Pods-MMQNBeautyKitDemo.release.xcconfig */,
+				D88520494A18AF83BC9C6D83 /* Pods-MMTXBeautyKitDemo.debug.xcconfig */,
+				A6370EDBE37AC1C5B17DE5D5 /* Pods-MMTXBeautyKitDemo.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		74E3D74F6B22E4B55CF7D486 /* Frameworks */ = {
+		40D4B42608C012844D46583A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1CC067FA32AAD50E40FECAD5 /* libPods-MMBeautyKitDemo.a */,
-				727E886D118A5E7BEF0C7702 /* libPods-MMQNBeautyKitDemo.a */,
-				4D54CFF22297434734B2B229 /* libPods-MMTXBeautyKitDemo.a */,
+				8E75224C95661A9D5402947C /* libPods-MMBeautyKitDemo.a */,
+				45B77607DB593946CFAE44F4 /* libPods-MMQNBeautyKitDemo.a */,
+				D6F75397D09AB27865EB9564 /* libPods-MMTXBeautyKitDemo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -200,7 +200,7 @@
 				7680437A25498C3F006B4C34 /* MMQNBeautyKitDemo */,
 				765BFCE623B3095B0017239F /* Products */,
 				2A389913EC9EBE83CA3602C4 /* Pods */,
-				74E3D74F6B22E4B55CF7D486 /* Frameworks */,
+				40D4B42608C012844D46583A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -302,11 +302,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 765BFCFE23B3095E0017239F /* Build configuration list for PBXNativeTarget "MMBeautyKitDemo" */;
 			buildPhases = (
-				18C31CB655B06548B6554C19 /* [CP] Check Pods Manifest.lock */,
+				8BD146AF26AD134120A8F734 /* [CP] Check Pods Manifest.lock */,
 				765BFCE123B3095B0017239F /* Sources */,
 				765BFCE223B3095B0017239F /* Frameworks */,
 				765BFCE323B3095B0017239F /* Resources */,
-				B8F4A381B98A05E4884B4429 /* [CP] Copy Pods Resources */,
+				B99500E3DFB95B12DC310F0E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -321,12 +321,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7680438F25498C40006B4C34 /* Build configuration list for PBXNativeTarget "MMQNBeautyKitDemo" */;
 			buildPhases = (
-				01828E8A8163DCB495F2C8CC /* [CP] Check Pods Manifest.lock */,
+				B054DFA40FDFF1F8D9021F0C /* [CP] Check Pods Manifest.lock */,
 				7680437525498C3F006B4C34 /* Sources */,
 				7680437625498C3F006B4C34 /* Frameworks */,
 				7680437725498C3F006B4C34 /* Resources */,
-				71DC08A5E9AC48F4C966599F /* [CP] Embed Pods Frameworks */,
-				85AE6F1D2B9DCAD18EC41C83 /* [CP] Copy Pods Resources */,
+				C05EE8BBAA8255512A0BE1CE /* [CP] Embed Pods Frameworks */,
+				274FE5BF40BCCC7BAB752503 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -341,11 +341,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76F98CC0254986D00020F4F6 /* Build configuration list for PBXNativeTarget "MMTXBeautyKitDemo" */;
 			buildPhases = (
-				9F8889E564EF9E1A43B49C43 /* [CP] Check Pods Manifest.lock */,
+				C3FF3186228E6C158E520E32 /* [CP] Check Pods Manifest.lock */,
 				76F98CA4254986CF0020F4F6 /* Sources */,
 				76F98CA5254986CF0020F4F6 /* Frameworks */,
 				76F98CA6254986CF0020F4F6 /* Resources */,
-				1B831EB69ADBA9ECBF1B2E01 /* [CP] Copy Pods Resources */,
+				CA274883F20685D7C252071E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -432,29 +432,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		01828E8A8163DCB495F2C8CC /* [CP] Check Pods Manifest.lock */ = {
+		274FE5BF40BCCC7BAB752503 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MMQNBeautyKitDemo/Pods-MMQNBeautyKitDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MMQNBeautyKitDemo-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-MMQNBeautyKitDemo/Pods-MMQNBeautyKitDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MMQNBeautyKitDemo/Pods-MMQNBeautyKitDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		18C31CB655B06548B6554C19 /* [CP] Check Pods Manifest.lock */ = {
+		8BD146AF26AD134120A8F734 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -476,24 +471,46 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1B831EB69ADBA9ECBF1B2E01 /* [CP] Copy Pods Resources */ = {
+		B054DFA40FDFF1F8D9021F0C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MMTXBeautyKitDemo/Pods-MMTXBeautyKitDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MMTXBeautyKitDemo/Pods-MMTXBeautyKitDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MMQNBeautyKitDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MMTXBeautyKitDemo/Pods-MMTXBeautyKitDemo-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		71DC08A5E9AC48F4C966599F /* [CP] Embed Pods Frameworks */ = {
+		B99500E3DFB95B12DC310F0E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MMBeautyKitDemo/Pods-MMBeautyKitDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MMBeautyKitDemo/Pods-MMBeautyKitDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MMBeautyKitDemo/Pods-MMBeautyKitDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C05EE8BBAA8255512A0BE1CE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -510,24 +527,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MMQNBeautyKitDemo/Pods-MMQNBeautyKitDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		85AE6F1D2B9DCAD18EC41C83 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MMQNBeautyKitDemo/Pods-MMQNBeautyKitDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MMQNBeautyKitDemo/Pods-MMQNBeautyKitDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MMQNBeautyKitDemo/Pods-MMQNBeautyKitDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9F8889E564EF9E1A43B49C43 /* [CP] Check Pods Manifest.lock */ = {
+		C3FF3186228E6C158E520E32 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -549,21 +549,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B8F4A381B98A05E4884B4429 /* [CP] Copy Pods Resources */ = {
+		CA274883F20685D7C252071E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MMBeautyKitDemo/Pods-MMBeautyKitDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MMTXBeautyKitDemo/Pods-MMTXBeautyKitDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MMBeautyKitDemo/Pods-MMBeautyKitDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MMTXBeautyKitDemo/Pods-MMTXBeautyKitDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MMBeautyKitDemo/Pods-MMBeautyKitDemo-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MMTXBeautyKitDemo/Pods-MMTXBeautyKitDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -789,7 +789,7 @@
 		};
 		765BFCFF23B3095E0017239F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40CB81A941EA8A6FDBB7CF28 /* Pods-MMBeautyKitDemo.debug.xcconfig */;
+			baseConfigurationReference = F42C0F07547E549A32D1C879 /* Pods-MMBeautyKitDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -815,7 +815,7 @@
 		};
 		765BFD0023B3095E0017239F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C03C1CD256D70EA26DE162CC /* Pods-MMBeautyKitDemo.release.xcconfig */;
+			baseConfigurationReference = 68F0B47324477B17E05D92AE /* Pods-MMBeautyKitDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
@@ -841,7 +841,7 @@
 		};
 		7680439025498C40006B4C34 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B535C018552462896553FAF0 /* Pods-MMQNBeautyKitDemo.debug.xcconfig */;
+			baseConfigurationReference = 0FDA620736126B31A05DC8AB /* Pods-MMQNBeautyKitDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -860,7 +860,7 @@
 		};
 		7680439125498C40006B4C34 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F6F2E02C32BDAEF9CDE3616 /* Pods-MMQNBeautyKitDemo.release.xcconfig */;
+			baseConfigurationReference = 926B64EC988A1717AAFBE79A /* Pods-MMQNBeautyKitDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -879,7 +879,7 @@
 		};
 		76F98CBE254986D00020F4F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DA61CE0EBC93B739AC6D44B /* Pods-MMTXBeautyKitDemo.debug.xcconfig */;
+			baseConfigurationReference = D88520494A18AF83BC9C6D83 /* Pods-MMTXBeautyKitDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -898,7 +898,7 @@
 		};
 		76F98CBF254986D00020F4F6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BE493988980491257E4F9E89 /* Pods-MMTXBeautyKitDemo.release.xcconfig */;
+			baseConfigurationReference = A6370EDBE37AC1C5B17DE5D5 /* Pods-MMTXBeautyKitDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
