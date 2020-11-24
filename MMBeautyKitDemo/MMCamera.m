@@ -58,6 +58,8 @@
             if ([device isLowLightBoostSupported]) {
                 device.automaticallyEnablesLowLightBoostWhenAvailable = YES;
             }
+            [device setActiveVideoMinFrameDuration:CMTimeMake(1, 25)];
+            [device setActiveVideoMaxFrameDuration:CMTimeMake(1, 25)];
             [device unlockForConfiguration];
             self.captureDevice = device;
             

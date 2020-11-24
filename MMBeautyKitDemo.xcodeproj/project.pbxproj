@@ -9,6 +9,27 @@
 /* Begin PBXBuildFile section */
 		1BF44D86928A4B080E78C8A8 /* libPods-MMBeautyKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E75224C95661A9D5402947C /* libPods-MMBeautyKitDemo.a */; };
 		47571F9FF02BF57EA51F326C /* libPods-MMTXBeautyKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F75397D09AB27865EB9564 /* libPods-MMTXBeautyKitDemo.a */; };
+		76160661256BA7A700F9C194 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76160660256BA7A700F9C194 /* AppDelegate.m */; };
+		76160664256BA7A700F9C194 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76160663256BA7A700F9C194 /* SceneDelegate.m */; };
+		76160667256BA7A700F9C194 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76160666256BA7A700F9C194 /* ViewController.m */; };
+		7616066A256BA7A700F9C194 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76160668256BA7A700F9C194 /* Main.storyboard */; };
+		7616066C256BA7A900F9C194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7616066B256BA7A900F9C194 /* Assets.xcassets */; };
+		7616066F256BA7A900F9C194 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7616066D256BA7A900F9C194 /* LaunchScreen.storyboard */; };
+		76160672256BA7A900F9C194 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76160671256BA7A900F9C194 /* main.m */; };
+		76160680256BAE3400F9C194 /* MMArgoraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7616067F256BAE3400F9C194 /* MMArgoraViewController.m */; };
+		7616069F256BB33C00F9C194 /* MMCameraTabSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAADCF0324C84118001D83BC /* MMCameraTabSegmentView.m */; };
+		761606A4256BB34400F9C194 /* MMAssetGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 765BFD2223B309DB0017239F /* MMAssetGridViewCell.m */; };
+		761606A5256BB34400F9C194 /* MMDeviceMotionObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 765BFD2723B309DB0017239F /* MMDeviceMotionObserver.m */; };
+		761606A6256BB34400F9C194 /* MMVideoAssetsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765BFD2823B309DB0017239F /* MMVideoAssetsCollectionViewController.m */; };
+		761606A7256BB34400F9C194 /* MMBeautyRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 765BFD1C23B309C40017239F /* MMBeautyRender.m */; };
+		761606E7256BB82700F9C194 /* MMArgoraSourceMediaIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 761606E6256BB82700F9C194 /* MMArgoraSourceMediaIO.m */; };
+		7616071C256C9D1900F9C194 /* MMCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 7616071B256C9D1900F9C194 /* MMCamera.m */; };
+		76160721256CADCD00F9C194 /* Lookup.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7661056C24EAC20F00B89BF5 /* Lookup.bundle */; };
+		76160726256CADCD00F9C194 /* Lookup.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7661056C24EAC20F00B89BF5 /* Lookup.bundle */; };
+		76160727256CADCE00F9C194 /* Lookup.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7661056C24EAC20F00B89BF5 /* Lookup.bundle */; };
+		7616072C256CADD100F9C194 /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7661056D24EAC21500B89BF5 /* Resources.bundle */; };
+		7616072D256CADD100F9C194 /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7661056D24EAC21500B89BF5 /* Resources.bundle */; };
+		76160732256CADD200F9C194 /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7661056D24EAC21500B89BF5 /* Resources.bundle */; };
 		76513FBC250109BA0070D8D5 /* MMBeautyRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 765BFD1C23B309C40017239F /* MMBeautyRender.m */; };
 		7651593B25021DEF0070D8D5 /* MMCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765BFD2623B309DB0017239F /* MMCameraViewController.m */; };
 		765BFCEA23B3095B0017239F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 765BFCE923B3095B0017239F /* AppDelegate.m */; };
@@ -51,13 +72,33 @@
 		76F98CBA254986D00020F4F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F98CB8254986D00020F4F6 /* LaunchScreen.storyboard */; };
 		76F98CBD254986D00020F4F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F98CBC254986D00020F4F6 /* main.m */; };
 		CE6EC9678350CD412B796F32 /* libPods-MMQNBeautyKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B77607DB593946CFAE44F4 /* libPods-MMQNBeautyKitDemo.a */; };
+		F8B391689819116BA45C2B08 /* libPods-MMArgoraBeautyKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7664B18E5EEA87EEA03A288A /* libPods-MMArgoraBeautyKitDemo.a */; };
 		FAADCF0424C84118001D83BC /* MMCameraTabSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAADCF0324C84118001D83BC /* MMCameraTabSegmentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0FDA620736126B31A05DC8AB /* Pods-MMQNBeautyKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMQNBeautyKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-MMQNBeautyKitDemo/Pods-MMQNBeautyKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		376B0487E031BB9D3C6FD7E8 /* Pods-MMArgoraBeautyKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMArgoraBeautyKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-MMArgoraBeautyKitDemo/Pods-MMArgoraBeautyKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		45B77607DB593946CFAE44F4 /* libPods-MMQNBeautyKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMQNBeautyKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68F0B47324477B17E05D92AE /* Pods-MMBeautyKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMBeautyKitDemo.release.xcconfig"; path = "Target Support Files/Pods-MMBeautyKitDemo/Pods-MMBeautyKitDemo.release.xcconfig"; sourceTree = "<group>"; };
+		7616065D256BA7A700F9C194 /* MMArgoraBeautyKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMArgoraBeautyKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7616065F256BA7A700F9C194 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		76160660256BA7A700F9C194 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		76160662256BA7A700F9C194 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		76160663256BA7A700F9C194 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		76160665256BA7A700F9C194 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		76160666256BA7A700F9C194 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		76160669256BA7A700F9C194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7616066B256BA7A900F9C194 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7616066E256BA7A900F9C194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		76160670256BA7A900F9C194 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76160671256BA7A900F9C194 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7616067E256BAE3400F9C194 /* MMArgoraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMArgoraViewController.h; sourceTree = "<group>"; };
+		7616067F256BAE3400F9C194 /* MMArgoraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMArgoraViewController.m; sourceTree = "<group>"; };
+		761606E5256BB82700F9C194 /* MMArgoraSourceMediaIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMArgoraSourceMediaIO.h; sourceTree = "<group>"; };
+		761606E6256BB82700F9C194 /* MMArgoraSourceMediaIO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMArgoraSourceMediaIO.m; sourceTree = "<group>"; };
+		7616071A256C9D1900F9C194 /* MMCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMCamera.h; sourceTree = "<group>"; };
+		7616071B256C9D1900F9C194 /* MMCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMCamera.m; sourceTree = "<group>"; };
 		76513FB4250103210070D8D5 /* ExportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ExportOptions.plist; sourceTree = "<group>"; };
 		76513FB5250103210070D8D5 /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
 		76513FB6250103210070D8D5 /* package_upload.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = package_upload.py; sourceTree = "<group>"; };
@@ -89,6 +130,7 @@
 		765BFD2823B309DB0017239F /* MMVideoAssetsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMVideoAssetsCollectionViewController.m; sourceTree = "<group>"; };
 		7661056C24EAC20F00B89BF5 /* Lookup.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Lookup.bundle; sourceTree = "<group>"; };
 		7661056D24EAC21500B89BF5 /* Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resources.bundle; sourceTree = "<group>"; };
+		7664B18E5EEA87EEA03A288A /* libPods-MMArgoraBeautyKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMArgoraBeautyKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		766CDFE224FF7BCD0069EDF8 /* MMTXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTXViewController.h; sourceTree = "<group>"; };
 		766CDFE324FF7BCD0069EDF8 /* MMTXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTXViewController.m; sourceTree = "<group>"; };
 		7680437925498C3F006B4C34 /* MMQNBeautyKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMQNBeautyKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +160,7 @@
 		8E75224C95661A9D5402947C /* libPods-MMBeautyKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMBeautyKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		926B64EC988A1717AAFBE79A /* Pods-MMQNBeautyKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMQNBeautyKitDemo.release.xcconfig"; path = "Target Support Files/Pods-MMQNBeautyKitDemo/Pods-MMQNBeautyKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 		A6370EDBE37AC1C5B17DE5D5 /* Pods-MMTXBeautyKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMTXBeautyKitDemo.release.xcconfig"; path = "Target Support Files/Pods-MMTXBeautyKitDemo/Pods-MMTXBeautyKitDemo.release.xcconfig"; sourceTree = "<group>"; };
+		AA72864BA78CE6F8493AF295 /* Pods-MMArgoraBeautyKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMArgoraBeautyKitDemo.release.xcconfig"; path = "Target Support Files/Pods-MMArgoraBeautyKitDemo/Pods-MMArgoraBeautyKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 		D6F75397D09AB27865EB9564 /* libPods-MMTXBeautyKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMTXBeautyKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88520494A18AF83BC9C6D83 /* Pods-MMTXBeautyKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMTXBeautyKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-MMTXBeautyKitDemo/Pods-MMTXBeautyKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F42C0F07547E549A32D1C879 /* Pods-MMBeautyKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMBeautyKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-MMBeautyKitDemo/Pods-MMBeautyKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +171,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7616065A256BA7A700F9C194 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8B391689819116BA45C2B08 /* libPods-MMArgoraBeautyKitDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		765BFCE223B3095B0017239F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -164,6 +215,8 @@
 				926B64EC988A1717AAFBE79A /* Pods-MMQNBeautyKitDemo.release.xcconfig */,
 				D88520494A18AF83BC9C6D83 /* Pods-MMTXBeautyKitDemo.debug.xcconfig */,
 				A6370EDBE37AC1C5B17DE5D5 /* Pods-MMTXBeautyKitDemo.release.xcconfig */,
+				376B0487E031BB9D3C6FD7E8 /* Pods-MMArgoraBeautyKitDemo.debug.xcconfig */,
+				AA72864BA78CE6F8493AF295 /* Pods-MMArgoraBeautyKitDemo.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -174,8 +227,33 @@
 				8E75224C95661A9D5402947C /* libPods-MMBeautyKitDemo.a */,
 				45B77607DB593946CFAE44F4 /* libPods-MMQNBeautyKitDemo.a */,
 				D6F75397D09AB27865EB9564 /* libPods-MMTXBeautyKitDemo.a */,
+				7664B18E5EEA87EEA03A288A /* libPods-MMArgoraBeautyKitDemo.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7616065E256BA7A700F9C194 /* MMArgoraBeautyKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				7616065F256BA7A700F9C194 /* AppDelegate.h */,
+				76160660256BA7A700F9C194 /* AppDelegate.m */,
+				76160662256BA7A700F9C194 /* SceneDelegate.h */,
+				76160663256BA7A700F9C194 /* SceneDelegate.m */,
+				76160665256BA7A700F9C194 /* ViewController.h */,
+				76160666256BA7A700F9C194 /* ViewController.m */,
+				7616067E256BAE3400F9C194 /* MMArgoraViewController.h */,
+				7616067F256BAE3400F9C194 /* MMArgoraViewController.m */,
+				761606E5256BB82700F9C194 /* MMArgoraSourceMediaIO.h */,
+				761606E6256BB82700F9C194 /* MMArgoraSourceMediaIO.m */,
+				76160668256BA7A700F9C194 /* Main.storyboard */,
+				7616066B256BA7A900F9C194 /* Assets.xcassets */,
+				7616066D256BA7A900F9C194 /* LaunchScreen.storyboard */,
+				76160670256BA7A900F9C194 /* Info.plist */,
+				76160671256BA7A900F9C194 /* main.m */,
+				7616071A256C9D1900F9C194 /* MMCamera.h */,
+				7616071B256C9D1900F9C194 /* MMCamera.m */,
+			);
+			path = MMArgoraBeautyKitDemo;
 			sourceTree = "<group>";
 		};
 		76513FB2250103210070D8D5 /* Script */ = {
@@ -198,6 +276,7 @@
 				765BFCE723B3095B0017239F /* MMBeautyKitDemo */,
 				76F98CA9254986CF0020F4F6 /* MMTXBeautyKitDemo */,
 				7680437A25498C3F006B4C34 /* MMQNBeautyKitDemo */,
+				7616065E256BA7A700F9C194 /* MMArgoraBeautyKitDemo */,
 				765BFCE623B3095B0017239F /* Products */,
 				2A389913EC9EBE83CA3602C4 /* Pods */,
 				40D4B42608C012844D46583A /* Frameworks */,
@@ -210,6 +289,7 @@
 				765BFCE523B3095B0017239F /* MMBeautyKitDemo.app */,
 				76F98CA8254986CF0020F4F6 /* MMTXBeautyKitDemo.app */,
 				7680437925498C3F006B4C34 /* MMQNBeautyKitDemo.app */,
+				7616065D256BA7A700F9C194 /* MMArgoraBeautyKitDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,10 +297,10 @@
 		765BFCE723B3095B0017239F /* MMBeautyKitDemo */ = {
 			isa = PBXGroup;
 			children = (
-				765BFD2123B309DB0017239F /* MMCameraViewController.h */,
-				765BFD2623B309DB0017239F /* MMCameraViewController.m */,
 				765BFD1623B309B30017239F /* MMCamera.h */,
 				765BFD1523B309B30017239F /* MMCamera.m */,
+				765BFD2123B309DB0017239F /* MMCameraViewController.h */,
+				765BFD2623B309DB0017239F /* MMCameraViewController.m */,
 				765BFCE823B3095B0017239F /* AppDelegate.h */,
 				765BFCE923B3095B0017239F /* AppDelegate.m */,
 				765BFCEB23B3095B0017239F /* SceneDelegate.h */,
@@ -298,6 +378,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7616065C256BA7A700F9C194 /* MMArgoraBeautyKitDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76160675256BA7A900F9C194 /* Build configuration list for PBXNativeTarget "MMArgoraBeautyKitDemo" */;
+			buildPhases = (
+				769DF20F2675CA3CF6B1FB05 /* [CP] Check Pods Manifest.lock */,
+				76160659256BA7A700F9C194 /* Sources */,
+				7616065A256BA7A700F9C194 /* Frameworks */,
+				7616065B256BA7A700F9C194 /* Resources */,
+				61267E4097B05DFEFC9FF896 /* [CP] Embed Pods Frameworks */,
+				91A0C3E807AE8ACB84E912CD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MMArgoraBeautyKitDemo;
+			productName = MMArgoraBeautyKitDemo;
+			productReference = 7616065D256BA7A700F9C194 /* MMArgoraBeautyKitDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 		765BFCE423B3095B0017239F /* MMBeautyKitDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 765BFCFE23B3095E0017239F /* Build configuration list for PBXNativeTarget "MMBeautyKitDemo" */;
@@ -365,6 +465,9 @@
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = sunfei;
 				TargetAttributes = {
+					7616065C256BA7A700F9C194 = {
+						CreatedOnToolsVersion = 12.2;
+					};
 					765BFCE423B3095B0017239F = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
@@ -392,11 +495,24 @@
 				765BFCE423B3095B0017239F /* MMBeautyKitDemo */,
 				76F98CA7254986CF0020F4F6 /* MMTXBeautyKitDemo */,
 				7680437825498C3F006B4C34 /* MMQNBeautyKitDemo */,
+				7616065C256BA7A700F9C194 /* MMArgoraBeautyKitDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7616065B256BA7A700F9C194 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76160732256CADD200F9C194 /* Resources.bundle in Resources */,
+				7616066F256BA7A900F9C194 /* LaunchScreen.storyboard in Resources */,
+				7616066C256BA7A900F9C194 /* Assets.xcassets in Resources */,
+				7616066A256BA7A700F9C194 /* Main.storyboard in Resources */,
+				76160727256CADCE00F9C194 /* Lookup.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		765BFCE323B3095B0017239F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -413,9 +529,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7616072D256CADD100F9C194 /* Resources.bundle in Resources */,
 				7680438B25498C40006B4C34 /* LaunchScreen.storyboard in Resources */,
 				7680438825498C40006B4C34 /* Assets.xcassets in Resources */,
 				7680438625498C3F006B4C34 /* Main.storyboard in Resources */,
+				76160726256CADCD00F9C194 /* Lookup.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,9 +541,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7616072C256CADD100F9C194 /* Resources.bundle in Resources */,
 				76F98CBA254986D00020F4F6 /* LaunchScreen.storyboard in Resources */,
 				76F98CB7254986D00020F4F6 /* Assets.xcassets in Resources */,
 				76F98CB5254986CF0020F4F6 /* Main.storyboard in Resources */,
+				76160721256CADCD00F9C194 /* Lookup.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +569,45 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MMQNBeautyKitDemo/Pods-MMQNBeautyKitDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		61267E4097B05DFEFC9FF896 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MMArgoraBeautyKitDemo/Pods-MMArgoraBeautyKitDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MMArgoraBeautyKitDemo/Pods-MMArgoraBeautyKitDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MMArgoraBeautyKitDemo/Pods-MMArgoraBeautyKitDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		769DF20F2675CA3CF6B1FB05 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MMArgoraBeautyKitDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8BD146AF26AD134120A8F734 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -469,6 +628,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91A0C3E807AE8ACB84E912CD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MMArgoraBeautyKitDemo/Pods-MMArgoraBeautyKitDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MMArgoraBeautyKitDemo/Pods-MMArgoraBeautyKitDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MMArgoraBeautyKitDemo/Pods-MMArgoraBeautyKitDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B054DFA40FDFF1F8D9021F0C /* [CP] Check Pods Manifest.lock */ = {
@@ -569,6 +745,25 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		76160659256BA7A700F9C194 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7616071C256C9D1900F9C194 /* MMCamera.m in Sources */,
+				76160680256BAE3400F9C194 /* MMArgoraViewController.m in Sources */,
+				761606A6256BB34400F9C194 /* MMVideoAssetsCollectionViewController.m in Sources */,
+				7616069F256BB33C00F9C194 /* MMCameraTabSegmentView.m in Sources */,
+				761606A4256BB34400F9C194 /* MMAssetGridViewCell.m in Sources */,
+				761606A5256BB34400F9C194 /* MMDeviceMotionObserver.m in Sources */,
+				76160667256BA7A700F9C194 /* ViewController.m in Sources */,
+				76160661256BA7A700F9C194 /* AppDelegate.m in Sources */,
+				761606A7256BB34400F9C194 /* MMBeautyRender.m in Sources */,
+				761606E7256BB82700F9C194 /* MMArgoraSourceMediaIO.m in Sources */,
+				76160672256BA7A900F9C194 /* main.m in Sources */,
+				76160664256BA7A700F9C194 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		765BFCE123B3095B0017239F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -624,6 +819,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		76160668256BA7A700F9C194 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76160669256BA7A700F9C194 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7616066D256BA7A900F9C194 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7616066E256BA7A900F9C194 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		765BFCF123B3095B0017239F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -675,6 +886,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		76160673256BA7A900F9C194 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 376B0487E031BB9D3C6FD7E8 /* Pods-MMArgoraBeautyKitDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 36WT396TPZ;
+				INFOPLIST_FILE = MMArgoraBeautyKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wemomo.momoappdemo1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = MomoChatDevelopmentProfile;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		76160674256BA7A900F9C194 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA72864BA78CE6F8493AF295 /* Pods-MMArgoraBeautyKitDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 36WT396TPZ;
+				INFOPLIST_FILE = MMArgoraBeautyKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wemomo.momoappdemo1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = MomoChatDevelopmentProfile;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		765BFCFC23B3095E0017239F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -792,9 +1049,9 @@
 			baseConfigurationReference = F42C0F07547E549A32D1C879 /* Pods-MMBeautyKitDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 57YUJ9BYGN;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 36WT396TPZ;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -806,9 +1063,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sunfei.sb;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wemomo.momoappdemo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = MomoChatDevelopmentProfile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -918,6 +1175,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		76160675256BA7A900F9C194 /* Build configuration list for PBXNativeTarget "MMArgoraBeautyKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76160673256BA7A900F9C194 /* Debug */,
+				76160674256BA7A900F9C194 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		765BFCE023B3095B0017239F /* Build configuration list for PBXProject "MMBeautyKitDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
