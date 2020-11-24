@@ -1,19 +1,19 @@
 //
-//  MMArgoraViewController.m
+//  MMAgoraPUSHViewController.m
 //  MMArgoraBeautyKitDemo
 //
-//  Created by sunfei on 2020/11/23.
+//  Created by sunfei on 2020/11/24.
 //  Copyright © 2020 sunfei. All rights reserved.
 //
 
-#import "MMArgoraViewController.h"
+#import "MMAgoraPUSHViewController.h"
 #import "MMDeviceMotionObserver.h"
 #import "MMBeautyRender.h"
 #import "MMCameraTabSegmentView.h"
 @import MetalPetal;
 @import AVFoundation;
 #import <AgoraRtcKit/AgoraRtcEngineKit.h>
-#import "MMArgoraSourceMediaIO.h"
+#import "MMAgoraCamera.h"
 
 static AgoraVideoRotation argoraRotation(UIInterfaceOrientation orientation) {
     switch (orientation) {
@@ -30,14 +30,14 @@ static AgoraVideoRotation argoraRotation(UIInterfaceOrientation orientation) {
     }
 }
 
-@interface MMArgoraViewController () <AVCaptureVideoDataOutputSampleBufferDelegate, MMDeviceMotionHandling, AgoraRtcEngineDelegate, MMArgoraSourceMediaIODelegate>
+@interface MMAgoraPUSHViewController () <AVCaptureVideoDataOutputSampleBufferDelegate, MMDeviceMotionHandling, AgoraRtcEngineDelegate, MMAgoraCameraDelegate>
 
+@property (nonatomic, strong) MMAgoraCamera *camera;
 @property (nonatomic, strong) MMBeautyRender *render;
-@property (nonatomic, strong) MMArgoraSourceMediaIO *mediaIO;
 @property (nonatomic, strong) AgoraRtcEngineKit *agoraKit;
 @property (nonatomic, assign) BOOL isJoined;
 
-@property (nonatomic, strong) UIView *localView;
+@property (nonatomic, strong) MTIImageView *localView;
 @property (nonatomic, strong) UIView *remoteView;
 
 @property (nonatomic, strong) MMCameraTabSegmentView *lookupView;
@@ -46,7 +46,7 @@ static AgoraVideoRotation argoraRotation(UIInterfaceOrientation orientation) {
 
 @end
 
-@implementation MMArgoraViewController
+@implementation MMAgoraPUSHViewController
 
 - (void)dealloc {
     [MMDeviceMotionObserver removeDeviceMotionHandler:self];
@@ -56,24 +56,24 @@ static AgoraVideoRotation argoraRotation(UIInterfaceOrientation orientation) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.camera = [[MMAgoraCamera alloc] init];
+    self.camera.delegate = self;
+    
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.localView = [[UIView alloc] initWithFrame:self.view.bounds];
-    self.remoteView = [[UIView alloc] init];
-    
+    self.localView = [[MTIImageView alloc] initWithFrame:self.view.bounds];
+    self.remoteView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 400)];
+
     [self.view addSubview:self.localView];
+    [self.view addSubview:self.remoteView];
     
     [MMDeviceMotionObserver startMotionObserve];
     [MMDeviceMotionObserver addDeviceMotionHandler:self];
     
     self.render = [[MMBeautyRender alloc] init];
     self.render.inputType = MMRenderInputTypeStream;
-    
-    MMArgoraSourceMediaIO *mediaIO = [[MMArgoraSourceMediaIO alloc] init];
-    mediaIO.delegate = self;
-    self.mediaIO = mediaIO;
     
     AgoraRtcEngineConfig *config = [[AgoraRtcEngineConfig alloc] init];
     config.appId = @"151a54796ecc427eb5d770b3561789f0";
@@ -83,17 +83,12 @@ static AgoraVideoRotation argoraRotation(UIInterfaceOrientation orientation) {
     NSString *channelName = @"123";
     [self.agoraKit setChannelProfile:AgoraChannelProfileLiveBroadcasting];
     [self.agoraKit setClientRole:AgoraClientRoleBroadcaster];
+//    [self.agoraKit setClientRole:AgoraClientRoleAudience];
     [self.agoraKit enableVideo];
     
-    [self.agoraKit setVideoSource:mediaIO];
+    [self.agoraKit setExternalVideoSource:YES useTexture:YES pushMode:YES];
     AgoraVideoEncoderConfiguration *configuration = [[AgoraVideoEncoderConfiguration alloc] initWithSize:AgoraVideoDimension640x480 frameRate:AgoraVideoFrameRateFps15 bitrate:AgoraVideoBitrateStandard orientationMode:AgoraVideoOutputOrientationModeFixedPortrait];
     [self.agoraKit setVideoEncoderConfiguration:configuration];
-    
-    AgoraRtcVideoCanvas *canvas = [[AgoraRtcVideoCanvas alloc] init];
-    canvas.uid = 0;
-    canvas.view = self.localView;
-    canvas.renderMode = AgoraVideoRenderModeHidden;
-    [self.agoraKit setupLocalVideo:canvas];
     
     [self.agoraKit setDefaultAudioRouteToSpeakerphone:YES];
     
@@ -414,24 +409,41 @@ static AgoraVideoRotation argoraRotation(UIInterfaceOrientation orientation) {
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    
+    [self.camera startCapture];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
-    [self.agoraKit setupLocalVideo:nil];
+    [self.camera stopCapture];
+    
     [self.agoraKit leaveChannel:^(AgoraChannelStats * _Nonnull stat) {
         NSLog(@"leave");
     }];
 }
 
-- (CVPixelBufferRef)mediaIO:(MMArgoraSourceMediaIO *)mediaIO pixelBuffer:(CVPixelBufferRef)pixelBuffer timestamp:(CMTime)time {
+- (void)camera:(MMAgoraCamera *)camera didOutputPixelBuffer:(CVPixelBufferRef)pixelBuffer timestamp:(CMTime)timestamp {
     NSError *error;
-    return [self.render renderPixelBuffer:pixelBuffer error:&error];
+    CVPixelBufferRef renderedBuffer = [self.render renderPixelBuffer:pixelBuffer error:&error];
+    if (renderedBuffer && !error) {
+        AgoraVideoFrame *videoFrame = [[AgoraVideoFrame alloc] init];
+        videoFrame.format = 12;
+        videoFrame.textureBuf = renderedBuffer;
+        videoFrame.time = timestamp;
+        videoFrame.rotation = 0;
+        
+        [self.agoraKit pushExternalVideoFrame:videoFrame];
+        
+        MTIImage *image = [[MTIImage alloc] initWithCVPixelBuffer:renderedBuffer alphaType:MTIAlphaTypeAlphaIsOne];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.localView.image = image;
+        });
+    }
 }
 
 - (void)flipButtonTapped:(UIButton *)button {
-//    self.render.devicePosition = self.camera.currentPosition;
+    //    self.render.devicePosition = self.camera.currentPosition;
 }
 
 #pragma mark - MMDeviceMotionHandling methods

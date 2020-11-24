@@ -23,13 +23,14 @@
 		761606A6256BB34400F9C194 /* MMVideoAssetsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765BFD2823B309DB0017239F /* MMVideoAssetsCollectionViewController.m */; };
 		761606A7256BB34400F9C194 /* MMBeautyRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 765BFD1C23B309C40017239F /* MMBeautyRender.m */; };
 		761606E7256BB82700F9C194 /* MMArgoraSourceMediaIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 761606E6256BB82700F9C194 /* MMArgoraSourceMediaIO.m */; };
-		7616071C256C9D1900F9C194 /* MMCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 7616071B256C9D1900F9C194 /* MMCamera.m */; };
 		76160721256CADCD00F9C194 /* Lookup.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7661056C24EAC20F00B89BF5 /* Lookup.bundle */; };
 		76160726256CADCD00F9C194 /* Lookup.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7661056C24EAC20F00B89BF5 /* Lookup.bundle */; };
 		76160727256CADCE00F9C194 /* Lookup.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7661056C24EAC20F00B89BF5 /* Lookup.bundle */; };
 		7616072C256CADD100F9C194 /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7661056D24EAC21500B89BF5 /* Resources.bundle */; };
 		7616072D256CADD100F9C194 /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7661056D24EAC21500B89BF5 /* Resources.bundle */; };
 		76160732256CADD200F9C194 /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7661056D24EAC21500B89BF5 /* Resources.bundle */; };
+		7616073D256CB45700F9C194 /* MMAgoraPUSHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7616073C256CB45700F9C194 /* MMAgoraPUSHViewController.m */; };
+		76160778256CBA1B00F9C194 /* MMAgoraCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 7616071B256C9D1900F9C194 /* MMAgoraCamera.m */; };
 		76513FBC250109BA0070D8D5 /* MMBeautyRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 765BFD1C23B309C40017239F /* MMBeautyRender.m */; };
 		7651593B25021DEF0070D8D5 /* MMCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765BFD2623B309DB0017239F /* MMCameraViewController.m */; };
 		765BFCEA23B3095B0017239F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 765BFCE923B3095B0017239F /* AppDelegate.m */; };
@@ -97,8 +98,10 @@
 		7616067F256BAE3400F9C194 /* MMArgoraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMArgoraViewController.m; sourceTree = "<group>"; };
 		761606E5256BB82700F9C194 /* MMArgoraSourceMediaIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMArgoraSourceMediaIO.h; sourceTree = "<group>"; };
 		761606E6256BB82700F9C194 /* MMArgoraSourceMediaIO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMArgoraSourceMediaIO.m; sourceTree = "<group>"; };
-		7616071A256C9D1900F9C194 /* MMCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMCamera.h; sourceTree = "<group>"; };
-		7616071B256C9D1900F9C194 /* MMCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMCamera.m; sourceTree = "<group>"; };
+		7616071A256C9D1900F9C194 /* MMAgoraCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMAgoraCamera.h; sourceTree = "<group>"; };
+		7616071B256C9D1900F9C194 /* MMAgoraCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMAgoraCamera.m; sourceTree = "<group>"; };
+		7616073B256CB45700F9C194 /* MMAgoraPUSHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMAgoraPUSHViewController.h; sourceTree = "<group>"; };
+		7616073C256CB45700F9C194 /* MMAgoraPUSHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMAgoraPUSHViewController.m; sourceTree = "<group>"; };
 		76513FB4250103210070D8D5 /* ExportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ExportOptions.plist; sourceTree = "<group>"; };
 		76513FB5250103210070D8D5 /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
 		76513FB6250103210070D8D5 /* package_upload.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = package_upload.py; sourceTree = "<group>"; };
@@ -241,19 +244,37 @@
 				76160663256BA7A700F9C194 /* SceneDelegate.m */,
 				76160665256BA7A700F9C194 /* ViewController.h */,
 				76160666256BA7A700F9C194 /* ViewController.m */,
-				7616067E256BAE3400F9C194 /* MMArgoraViewController.h */,
-				7616067F256BAE3400F9C194 /* MMArgoraViewController.m */,
-				761606E5256BB82700F9C194 /* MMArgoraSourceMediaIO.h */,
-				761606E6256BB82700F9C194 /* MMArgoraSourceMediaIO.m */,
+				7616073A256CB32D00F9C194 /* PUSH */,
+				76160737256CB2F000F9C194 /* MediaIO */,
 				76160668256BA7A700F9C194 /* Main.storyboard */,
 				7616066B256BA7A900F9C194 /* Assets.xcassets */,
 				7616066D256BA7A900F9C194 /* LaunchScreen.storyboard */,
 				76160670256BA7A900F9C194 /* Info.plist */,
 				76160671256BA7A900F9C194 /* main.m */,
-				7616071A256C9D1900F9C194 /* MMCamera.h */,
-				7616071B256C9D1900F9C194 /* MMCamera.m */,
+				7616071A256C9D1900F9C194 /* MMAgoraCamera.h */,
+				7616071B256C9D1900F9C194 /* MMAgoraCamera.m */,
 			);
 			path = MMArgoraBeautyKitDemo;
+			sourceTree = "<group>";
+		};
+		76160737256CB2F000F9C194 /* MediaIO */ = {
+			isa = PBXGroup;
+			children = (
+				7616067E256BAE3400F9C194 /* MMArgoraViewController.h */,
+				7616067F256BAE3400F9C194 /* MMArgoraViewController.m */,
+				761606E5256BB82700F9C194 /* MMArgoraSourceMediaIO.h */,
+				761606E6256BB82700F9C194 /* MMArgoraSourceMediaIO.m */,
+			);
+			path = MediaIO;
+			sourceTree = "<group>";
+		};
+		7616073A256CB32D00F9C194 /* PUSH */ = {
+			isa = PBXGroup;
+			children = (
+				7616073B256CB45700F9C194 /* MMAgoraPUSHViewController.h */,
+				7616073C256CB45700F9C194 /* MMAgoraPUSHViewController.m */,
+			);
+			path = PUSH;
 			sourceTree = "<group>";
 		};
 		76513FB2250103210070D8D5 /* Script */ = {
@@ -749,8 +770,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7616071C256C9D1900F9C194 /* MMCamera.m in Sources */,
 				76160680256BAE3400F9C194 /* MMArgoraViewController.m in Sources */,
+				7616073D256CB45700F9C194 /* MMAgoraPUSHViewController.m in Sources */,
+				76160778256CBA1B00F9C194 /* MMAgoraCamera.m in Sources */,
 				761606A6256BB34400F9C194 /* MMVideoAssetsCollectionViewController.m in Sources */,
 				7616069F256BB33C00F9C194 /* MMCameraTabSegmentView.m in Sources */,
 				761606A4256BB34400F9C194 /* MMAssetGridViewCell.m in Sources */,

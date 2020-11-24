@@ -7,12 +7,12 @@
 //
 
 #import "MMArgoraSourceMediaIO.h"
-#import "MMCamera.h"
+#import "MMAgoraCamera.h"
 #import "MMBeautyRender.h"
 
-@interface MMArgoraSourceMediaIO () <MMCameraDelegate>
+@interface MMArgoraSourceMediaIO () <MMAgoraCameraDelegate>
 
-@property (nonatomic, strong) MMCamera *camera;
+@property (nonatomic, strong) MMAgoraCamera *camera;
 @property (nonatomic, assign) UIInterfaceOrientation orientation;
 @property (nonatomic, strong) id<NSObject> viewOrientationObserver;
 
@@ -38,7 +38,7 @@
 @synthesize consumer = _consumer;
 
 - (BOOL)shouldInitialize {
-    self.camera = [[MMCamera alloc] init];
+    self.camera = [[MMAgoraCamera alloc] init];
     self.camera.delegate = self;
 
     return YES;
@@ -74,7 +74,7 @@
 }
 
 #pragma mark - AVCaptureVideoDataOutputSampleBufferDelegate methods
-- (void)camera:(MMCamera *)camera didOutputPixelBuffer:(CVPixelBufferRef)pixelBuffer timestamp:(CMTime)timestamp {
+- (void)camera:(MMAgoraCamera *)camera didOutputPixelBuffer:(CVPixelBufferRef)pixelBuffer timestamp:(CMTime)timestamp {
     CVPixelBufferRef renderedPixelBuffer = [self.delegate mediaIO:self pixelBuffer:pixelBuffer timestamp:timestamp];
     [self.consumer consumePixelBuffer:renderedPixelBuffer withTimestamp:timestamp rotation:AgoraVideoRotationNone];
 }

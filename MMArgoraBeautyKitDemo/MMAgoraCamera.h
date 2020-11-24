@@ -11,21 +11,21 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class MMCamera;
+@class MMAgoraCamera;
 
-@protocol MMCameraDelegate <NSObject>
+@protocol MMAgoraCameraDelegate <NSObject>
 
-- (void)camera:(MMCamera *)camera didOutputPixelBuffer:(CVPixelBufferRef)pixelBuffer timestamp:(CMTime)timestamp;
+- (void)camera:(MMAgoraCamera *)camera didOutputPixelBuffer:(CVPixelBufferRef)pixelBuffer timestamp:(CMTime)timestamp;
 
 @end
 
-@interface MMCamera : NSObject
+@interface MMAgoraCamera : NSObject
 
 - (void)switchCamera;
 - (void)startCapture;
 - (void)stopCapture;
 
-@property (nonatomic, weak) id<MMCameraDelegate> delegate;
+@property (nonatomic, weak) id<MMAgoraCameraDelegate> delegate;
 
 @end
 

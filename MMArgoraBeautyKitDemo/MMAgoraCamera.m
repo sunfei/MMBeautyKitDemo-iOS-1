@@ -6,9 +6,9 @@
 //  Copyright © 2020 sunfei. All rights reserved.
 //
 
-#import "MMCamera.h"
+#import "MMAgoraCamera.h"
 
-@interface MMCamera () <AVCaptureVideoDataOutputSampleBufferDelegate>
+@interface MMAgoraCamera () <AVCaptureVideoDataOutputSampleBufferDelegate>
 
 @property (nonatomic, assign) AVCaptureDevicePosition position;
 @property (nonatomic, strong) AVCaptureSession *captureSession;
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation MMCamera
+@implementation MMAgoraCamera
 
 - (instancetype)init
 {
@@ -77,6 +77,7 @@
         [self.captureSession commitConfiguration];
         
         [self.currentOutput connectionWithMediaType:AVMediaTypeVideo].videoOrientation = AVCaptureVideoOrientationPortrait;
+        [self.currentOutput connectionWithMediaType:AVMediaTypeVideo].videoMirrored = (self.position == AVCaptureDevicePositionFront);
         
         [self.captureSession startRunning];
     });

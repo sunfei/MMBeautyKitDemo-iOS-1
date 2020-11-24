@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "MMArgoraViewController.h"
+#import "MMAgoraPUSHViewController.h"
 @import Photos;
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -23,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.items = @[@"声网"];
+    self.items = @[@"MediaIO", @"PUSH"];
     self.view.backgroundColor = UIColor.whiteColor;
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
@@ -48,6 +49,13 @@
         case 0:
         {
         MMArgoraViewController *vc = [[MMArgoraViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+            
+        case 1:
+        {
+        MMAgoraPUSHViewController *vc = [[MMAgoraPUSHViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
         }
             break;
