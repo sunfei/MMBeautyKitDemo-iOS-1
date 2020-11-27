@@ -1088,7 +1088,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.wemomo.momoappdemo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = MomoChatDevelopmentProfile;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1114,7 +1114,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.wemomo.momotest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = Inhouse_momotest_only;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

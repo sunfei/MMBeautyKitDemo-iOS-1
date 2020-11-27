@@ -10,7 +10,7 @@ PODS:
   - MetalPetal/Core (1.13.0)
   - MetalPetal/Static (1.13.0):
     - MetalPetal/Core
-  - MMBeautyKit (2.1.1):
+  - MMBeautyKit (2.1.2):
     - CosmosEncrypt
     - MCCSecret
     - MetalPetal/Static
@@ -57,7 +57,7 @@ PODS:
 DEPENDENCIES:
   - AgoraRtcEngine_iOS
   - MetalPetal/Static (= 1.13.0)
-  - MMBeautyKit (= 2.1.1-Interact)
+  - MMBeautyKit (= 2.1.2-Interact)
   - PLMediaStreamingKit
   - TXLiteAVSDK_Professional
 
@@ -88,7 +88,7 @@ SPEC CHECKSUMS:
   Mantle: 4c0ed6ce47c96eccc4dc3bb071deb3def0e2c3be
   MCCSecret: 5658f66290969726586eddbdfe45e27731dbfa17
   MetalPetal: 985e14c41cea0086264799fae4de02602c51d794
-  MMBeautyKit: e41a9331b07c852bc0dc0544f171e23b87996330
+  MMBeautyKit: a12522eebe1f1340d3e9aa05cb301618ab21b68b
   MMBeautyMedia: 397eafdf7b91c767cfbe59581badd3edd8016ee9
   MMCV: dd788552e527dc96c9642bb22da49d7e0c2dcc7c
   MMDevice: 8fdf446c7aedc2243918eabcf66f1c84f362931e
@@ -101,6 +101,6 @@ SPEC CHECKSUMS:
   TXLiteAVSDK_Professional: 0993da88b243cba8250f027903f8b5f0c08be1fa
   ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
-PODFILE CHECKSUM: f58b454712ae56d01d7bf732e68e539af4b784c5
+PODFILE CHECKSUM: 6fa2aa5f22d5bad3c39e1e0587ca7040412fbb86
 
 COCOAPODS: 1.9.3
